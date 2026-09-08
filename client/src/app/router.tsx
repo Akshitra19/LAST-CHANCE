@@ -5,6 +5,7 @@ import { MorePage } from '../pages/MorePage';
 import { PlanPage } from '../pages/PlanPage';
 import { SyllabusPage } from '../pages/SyllabusPage';
 import { TestPage } from '../pages/TestPage';
+import { SettingsPage } from '../pages/SettingsPage';
 
 export function AppRouter() {
   return (
@@ -15,6 +16,7 @@ export function AppRouter() {
         <Route path="test" element={<TestPage />} />
         <Route path="syllabus" element={<SyllabusPage />} />
         <Route path="more" element={<MorePage />} />
+        <Route path="settings" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

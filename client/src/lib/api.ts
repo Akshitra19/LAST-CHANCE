@@ -1,4 +1,5 @@
 import type { SyllabusData, TopicStatus, TopicStatusResult } from '../types/syllabus';
+import type { SettingsData, SettingsPatch } from '../types/settings';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -41,4 +42,14 @@ export async function getSyllabus(signal?: AbortSignal): Promise<SyllabusData> {
 
 export async function updateTopicStatus(topicId: string, status: TopicStatus): Promise<TopicStatusResult> {
   return readData<TopicStatusResult>(await fetch(`${apiBaseUrl}/api/topics/${encodeURIComponent(topicId)}/status`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ status }) }));
+}
+
+export async function getSettings(signal?: AbortSignal): Promise<SettingsData> {
+  const data = await readData<SettingsData>(await fetch(`${apiBaseUrl}/api/settings`, { signal }));
+  if (!data || typeof data.examName !== 'string' || typeof data.targetMarks !== 'number') throw new ApiError('The settings response is invalid.');
+  return data;
+}
+
+export async function updateSettings(changes: SettingsPatch): Promise<SettingsData> {
+  return readData<SettingsData>(await fetch(`${apiBaseUrl}/api/settings`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(changes) }));
 }

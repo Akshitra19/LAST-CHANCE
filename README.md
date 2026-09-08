@@ -59,3 +59,7 @@ V1.2 adds the local server data path: Express routes â†’ strict Zod validation â
 ## V1.3 syllabus tracker
 
 The `/syllabus` route now renders the backend-powered official GATE 2027 hierarchy with expandable subjects and persistent topic-status controls. Mobile and tablet retain touch-friendly bottom navigation, while layouts from 1024px use a persistent sidebar and a readable maximum content width. Loading, controlled failure, Retry, per-topic saving, and safe mutation-error states are handled locally without exposing Supabase credentials to the browser.
+
+## V1.4 dashboard and settings
+
+Home now shows the saved exam and calendar-day countdown, target marks, the local-day study-hours target, and factual topic-status counts from the full syllabus hierarchy. `/settings`, linked from More, provides a validated persistent form for the existing settings contract; it sends only changed mutable fields and preserves unsaved input after failures. These real screens are visible through the established local development command with no new backend API or database migration.
