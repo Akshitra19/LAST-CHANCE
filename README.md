@@ -55,3 +55,7 @@ The migration is under `supabase/migrations/`; `supabase/seed.sql` is the reprod
 ## V1.2 backend APIs
 
 V1.2 adds the local server data path: Express routes → strict Zod validation → services → repositories → server-only Supabase. The foundational APIs are `GET/PATCH /api/settings`, `GET /api/syllabus`, and `PATCH /api/topics/:topicId/status`. `npm run verify:api` exercises these APIs against the configured database, restores its temporary settings/topic updates in `finally`, and verifies invalid requests are rejected. No frontend feature, public deployment, or database schema migration is included.
+
+## V1.3 syllabus tracker
+
+The `/syllabus` route now renders the backend-powered official GATE 2027 hierarchy with expandable subjects and persistent topic-status controls. Mobile and tablet retain touch-friendly bottom navigation, while layouts from 1024px use a persistent sidebar and a readable maximum content width. Loading, controlled failure, Retry, per-topic saving, and safe mutation-error states are handled locally without exposing Supabase credentials to the browser.
