@@ -39,3 +39,7 @@ export function studyHoursForToday(settings: { mondayStudyHours: number; sundayS
   if (now.getDay() === 1) return settings.mondayStudyHours;
   return settings.weekdayStudyHours;
 }
+
+export function localDateOnly(now = new Date()): string { return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`; }
+export function addCalendarDays(value: string, amount: number): string { const parsed = parseDateOnly(value); if (!parsed) throw new Error('Invalid date.'); const date = new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day + amount)); return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}`; }
+export function formatDateOnly(value: string): string { const parsed = parseDateOnly(value); if (!parsed) return value; return new Intl.DateTimeFormat(undefined, { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day))); }

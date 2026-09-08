@@ -1,5 +1,6 @@
 import type { SyllabusData, TopicStatus, TopicStatusResult } from '../types/syllabus';
 import type { SettingsData, SettingsPatch } from '../types/settings';
+import type { CreateDailyTaskInput, DailyTask, DailyTaskStatus, UpdateDailyTaskInput } from '../types/daily-task';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -53,3 +54,11 @@ export async function getSettings(signal?: AbortSignal): Promise<SettingsData> {
 export async function updateSettings(changes: SettingsPatch): Promise<SettingsData> {
   return readData<SettingsData>(await fetch(`${apiBaseUrl}/api/settings`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(changes) }));
 }
+
+export async function getDailyTasks(date: string, signal?: AbortSignal): Promise<DailyTask[]> { return readData<DailyTask[]>(await fetch(`${apiBaseUrl}/api/daily-tasks?date=${encodeURIComponent(date)}`, { signal })); }
+export async function createDailyTask(input: CreateDailyTaskInput): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(input) })); }
+export async function updateDailyTask(id: string, changes: UpdateDailyTaskInput): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(changes) })); }
+export async function updateDailyTaskStatus(id: string, status: DailyTaskStatus): Promise<DailyTask> { return updateDailyTask(id, { status }); }
+export async function deleteDailyTask(id: string): Promise<void> { const response = await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}`, { method: 'DELETE' }); if (!response.ok) throw new ApiError('The task could not be deleted.', response.status); }
+export async function startDailyTaskTimer(id: string): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}/timer/start`, { method: 'POST' })); }
+export async function stopDailyTaskTimer(id: string): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}/timer/stop`, { method: 'POST' })); }

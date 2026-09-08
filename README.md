@@ -34,6 +34,8 @@ npm run typecheck
 npm run build
 npm run validate:seed
 npm run verify:db
+npm run verify:api
+npm run verify:planner
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -63,3 +65,7 @@ The `/syllabus` route now renders the backend-powered official GATE 2027 hierarc
 ## V1.4 dashboard and settings
 
 Home now shows the saved exam and calendar-day countdown, target marks, the local-day study-hours target, and factual topic-status counts from the full syllabus hierarchy. `/settings`, linked from More, provides a validated persistent form for the existing settings contract; it sends only changed mutable fields and preserves unsaved input after failures. These real screens are visible through the established local development command with no new backend API or database migration.
+
+## V1.5 daily study planner
+
+The `/plan` route provides date-based task CRUD using the existing `daily_tasks` table, real syllabus-linked subject/topic selectors, persistent TODO/Done/Skipped state, manual actual minutes, and one server-authoritative running timer. Timer starts survive refresh, only completed whole minutes (floor rounding) accumulate on Stop, and only one timer can run globally. Sub-minute stops add zero; a runaway timer is safely stopped with a correction conflict rather than writing invalid time. `npm run verify:planner` validates the six planner endpoints, strict input handling, status/timer semantics (including concurrent starts and runaway recovery), and complete cleanup of temporary verification rows.

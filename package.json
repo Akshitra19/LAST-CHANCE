@@ -12,6 +12,7 @@
     "typecheck": "npm run typecheck --workspace client && npm run typecheck --workspace server",
     "verify:db": "npm run verify:db --workspace server",
     "verify:api": "npm run verify:api --workspace server",
+    "verify:planner": "npm run verify:planner --workspace server",
     "validate:seed": "npm run validate:seed --workspace server"
   },
   "devDependencies": {

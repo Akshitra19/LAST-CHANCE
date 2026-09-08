@@ -7,6 +7,7 @@ import { healthRouter } from './routes/health.routes.js';
 import { settingsRouter } from './routes/settings.routes.js';
 import { syllabusRouter } from './routes/syllabus.routes.js';
 import { topicsRouter } from './routes/topics.routes.js';
+import { dailyTasksRouter } from './routes/daily-tasks.routes.js';
 
 export const app = express();
 
@@ -14,7 +15,7 @@ app.disable('x-powered-by');
 app.use(
   cors({
     origin: env.clientOrigin,
-    methods: ['GET', 'PATCH'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     optionsSuccessStatus: 204
   })
 );
@@ -24,6 +25,7 @@ app.use('/api/health', healthRouter);
 app.use('/api/settings', settingsRouter);
 app.use('/api/syllabus', syllabusRouter);
 app.use('/api/topics', topicsRouter);
+app.use('/api/daily-tasks', dailyTasksRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

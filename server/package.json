@@ -9,6 +9,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit --pretty false",
     "verify:db": "tsx src/scripts/verify-db.ts",
     "verify:api": "tsx src/scripts/verify-api.ts",
+    "verify:planner": "tsx src/scripts/verify-planner.ts",
     "validate:seed": "tsx src/scripts/validate-seed.ts",
     "start": "node dist/index.js"
   },
