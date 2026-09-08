@@ -20,13 +20,15 @@ function readOptional(value: string | undefined): string | undefined {
 }
 
 const supabaseUrl = readOptional(process.env.SUPABASE_URL);
-const supabaseServiceRoleKey = readOptional(process.env.SUPABASE_SERVICE_ROLE_KEY);
+const supabaseSecretKey = readOptional(process.env.SUPABASE_SECRET_KEY);
+const supabaseSecretKeyValid = supabaseSecretKey?.startsWith('sb_secret_') ?? false;
 
 export const env = {
   nodeEnv: process.env.NODE_ENV ?? 'development',
   port: readPort(process.env.PORT),
   clientOrigin: readOptional(process.env.CLIENT_ORIGIN) ?? 'http://localhost:4173',
   supabaseUrl,
-  supabaseServiceRoleKey,
-  supabaseConfigured: Boolean(supabaseUrl && supabaseServiceRoleKey)
+  supabaseSecretKey,
+  supabaseSecretKeyValid,
+  supabaseConfigured: Boolean(supabaseUrl && supabaseSecretKey && supabaseSecretKeyValid)
 } as const;
