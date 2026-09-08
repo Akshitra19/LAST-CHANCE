@@ -1,6 +1,7 @@
 import type { SyllabusData, TopicStatus, TopicStatusResult } from '../types/syllabus';
 import type { SettingsData, SettingsPatch } from '../types/settings';
 import type { CreateDailyTaskInput, DailyTask, DailyTaskStatus, UpdateDailyTaskInput } from '../types/daily-task';
+import type { CreateQuestionInput, QuestionDetail, QuestionFilters, QuestionList, UpdateQuestionInput } from '../types/question';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -62,3 +63,11 @@ export async function updateDailyTaskStatus(id: string, status: DailyTaskStatus)
 export async function deleteDailyTask(id: string): Promise<void> { const response = await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}`, { method: 'DELETE' }); if (!response.ok) throw new ApiError('The task could not be deleted.', response.status); }
 export async function startDailyTaskTimer(id: string): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}/timer/start`, { method: 'POST' })); }
 export async function stopDailyTaskTimer(id: string): Promise<DailyTask> { return readData<DailyTask>(await fetch(`${apiBaseUrl}/api/daily-tasks/${encodeURIComponent(id)}/timer/stop`, { method: 'POST' })); }
+
+export async function getQuestions(filters: QuestionFilters, signal?: AbortSignal): Promise<QuestionList> { const query = new URLSearchParams(); for (const [key,value] of Object.entries(filters)) if (value !== undefined && value !== '') query.set(key,String(value)); return readData<QuestionList>(await fetch(`${apiBaseUrl}/api/questions?${query}`,{signal})); }
+export async function getQuestion(id:string,signal?:AbortSignal):Promise<QuestionDetail>{return readData<QuestionDetail>(await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}`,{signal}));}
+export async function createQuestion(input:CreateQuestionInput):Promise<QuestionDetail>{return readData<QuestionDetail>(await fetch(`${apiBaseUrl}/api/questions`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(input)}));}
+export async function updateQuestion(id:string,input:UpdateQuestionInput):Promise<QuestionDetail>{return readData<QuestionDetail>(await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}`,{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify(input)}));}
+export async function uploadQuestionImage(id:string,file:File):Promise<{hasImage:true;imageUrl:string}>{return readData(await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image`,{method:'PUT',headers:{'content-type':file.type},body:file}));}
+export async function removeQuestionImage(id:string):Promise<void>{const response=await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image`,{method:'DELETE'});if(!response.ok)throw new ApiError('The image could not be removed.',response.status);}
+export function questionImageUrl(id:string,version?:string):string{return `${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image${version?`?v=${encodeURIComponent(version)}`:''}`;}

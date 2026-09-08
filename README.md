@@ -36,6 +36,8 @@ npm run validate:seed
 npm run verify:db
 npm run verify:api
 npm run verify:planner
+npm run setup:question-storage
+npm run verify:questions
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -69,3 +71,7 @@ Home now shows the saved exam and calendar-day countdown, target marks, the loca
 ## V1.5 daily study planner
 
 The `/plan` route provides date-based task CRUD using the existing `daily_tasks` table, real syllabus-linked subject/topic selectors, persistent TODO/Done/Skipped state, manual actual minutes, and one server-authoritative running timer. Timer starts survive refresh, only completed whole minutes (floor rounding) accumulate on Stop, and only one timer can run globally. Sub-minute stops add zero; a runaway timer is safely stopped with a correction conflict rather than writing invalid time. `npm run verify:planner` validates the six planner endpoints, strict input handling, status/timer semantics (including concurrent starts and runaway recovery), and complete cleanup of temporary verification rows.
+
+## V1.6 question bank
+
+The `/questions` route provides a server-backed Question Bank for MCQ, MSQ, and NAT questions using the existing question schema. It includes syllabus-aware subject/topic selection, canonical answers, pagination and filters, editing, archive/restore, and one optional private image per question. Images are validated and served only through the backend; run `npm run setup:question-storage` to idempotently configure the private `question-images` bucket. `npm run verify:questions` exercises validation, CRUD transitions, filtering, private image lifecycle, and complete temporary-data cleanup. Open `http://localhost:4173/questions` while the local development servers are running.

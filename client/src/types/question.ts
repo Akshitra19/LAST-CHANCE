@@ -1,0 +1,17 @@
+export const questionTypes = ['MCQ','MSQ','NAT'] as const;
+export const questionDifficulties = ['EASY','MEDIUM','HARD'] as const;
+export const optionKeys = ['A','B','C','D','E','F'] as const;
+export type QuestionType = typeof questionTypes[number];
+export type QuestionDifficulty = typeof questionDifficulties[number];
+export type OptionKey = typeof optionKeys[number];
+export type QuestionRef = { id:string;code:string;name:string };
+export type QuestionOption = { key:OptionKey;text:string };
+export type OptionCorrectAnswer = { optionKeys:OptionKey[] };
+export type NatCorrectAnswer = { min:number;max:number };
+export type QuestionCorrectAnswer = OptionCorrectAnswer|NatCorrectAnswer;
+export type QuestionListItem = { id:string;questionText:string;questionType:QuestionType;marks:1|2;difficulty:QuestionDifficulty|null;year:number|null;source:string|null;subject:QuestionRef;topic:QuestionRef;hasImage:boolean;archived:boolean;createdAt:string;updatedAt:string };
+export type QuestionDetail = QuestionListItem & { correctAnswer:QuestionCorrectAnswer;explanation:string|null;options:QuestionOption[];archivedAt:string|null };
+export type QuestionList = { items:QuestionListItem[];page:number;pageSize:number;total:number;totalPages:number };
+export type CreateQuestionInput = { subjectId:string;topicId:string;questionText:string;questionType:QuestionType;marks:1|2;difficulty?:QuestionDifficulty|null;year?:number|null;source?:string|null;explanation?:string|null;options?:QuestionOption[];correctAnswer:QuestionCorrectAnswer };
+export type UpdateQuestionInput = Partial<CreateQuestionInput & { archived:boolean }>;
+export type QuestionFilters = { page:number;pageSize:number;subjectId?:string;topicId?:string;questionType?:QuestionType;marks?:1|2;difficulty?:QuestionDifficulty;year?:number;archived:boolean };

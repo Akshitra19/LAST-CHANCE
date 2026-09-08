@@ -6,6 +6,7 @@ import { PlanPage } from '../pages/PlanPage';
 import { SyllabusPage } from '../pages/SyllabusPage';
 import { TestPage } from '../pages/TestPage';
 import { SettingsPage } from '../pages/SettingsPage';
+import { QuestionBankPage } from '../pages/QuestionBankPage';
 
 export function AppRouter() {
   return (
@@ -14,6 +15,7 @@ export function AppRouter() {
         <Route index element={<HomePage />} />
         <Route path="plan" element={<PlanPage />} />
         <Route path="test" element={<TestPage />} />
+        <Route path="questions" element={<QuestionBankPage />} />
         <Route path="syllabus" element={<SyllabusPage />} />
         <Route path="more" element={<MorePage />} />
         <Route path="settings" element={<SettingsPage />} />

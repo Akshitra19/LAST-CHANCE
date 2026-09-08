@@ -10,6 +10,8 @@
     "verify:db": "tsx src/scripts/verify-db.ts",
     "verify:api": "tsx src/scripts/verify-api.ts",
     "verify:planner": "tsx src/scripts/verify-planner.ts",
+    "setup:question-storage": "tsx src/scripts/setup-question-storage.ts",
+    "verify:questions": "tsx src/scripts/verify-questions.ts",
     "validate:seed": "tsx src/scripts/validate-seed.ts",
     "start": "node dist/index.js"
   },
