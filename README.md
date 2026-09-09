@@ -40,6 +40,7 @@ npm run setup:question-storage
 npm run verify:questions
 npm run verify:tests
 npm run verify:attempts
+npm run verify:scoring
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -84,4 +85,8 @@ The `/test` library and `/tests/new` builder create saved Topic Tests, mixed Cus
 
 ## V1.8 test engine
 
-Saved tests now support Start, Continue, and fresh Retake flows. The focused exam route handles MCQ, MSQ, and NAT responses, Clear Answer, Mark for Review, question navigation, a responsive palette, private question images, and failure-aware autosave. Its countdown and manual/automatic submission are server-authoritative: leaving or refreshing never pauses the deadline, while persisted answers, review flags, and per-question time restore on Continue. `npm run verify:attempts` exercises the real API and database contracts, safety boundaries, expiry, submission, retake behavior, and complete temporary-data cleanup. Scoring begins in V1.9; V1.8 intentionally leaves all score, correctness, and marks-awarded fields null.
+Saved tests support Start, Continue, and fresh Retake flows. The focused exam route handles MCQ, MSQ, and NAT responses, Clear Answer, Mark for Review, question navigation, a responsive palette, private question images, and failure-aware autosave. Its countdown and manual/automatic submission are server-authoritative: leaving or refreshing never pauses the deadline, while persisted answers, review flags, and per-question time restore on Continue. `npm run verify:attempts` exercises the real API and database contracts, safety boundaries, expiry, submission, retake behavior, and complete temporary-data cleanup.
+
+## V1.9 scoring engine
+
+Submitted attempts are scored authoritatively on the server. MCQs use official one-third negative marking, MSQs require exact-set equality with no partial or negative marks, and NAT answers use inclusive numeric ranges. The engine aggregates exact integer third-mark units and rounds the raw attempt score only once; it does not clamp negative totals. `npm run verify:scoring` covers pure domain rules and real submission, persistence, retry, integrity, privacy, and cleanup behavior. Results remain intentionally hidden from the exam UI; the Results and Mistakes experience begins in V1.10.

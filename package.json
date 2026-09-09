@@ -17,6 +17,7 @@
     "verify:questions": "npm run verify:questions --workspace server",
     "verify:tests": "npm run verify:tests --workspace server",
     "verify:attempts": "npm run verify:attempts --workspace server",
+    "verify:scoring": "npm run verify:scoring --workspace server",
     "validate:seed": "npm run validate:seed --workspace server"
   },
   "devDependencies": {

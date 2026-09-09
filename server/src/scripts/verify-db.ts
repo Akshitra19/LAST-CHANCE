@@ -1,5 +1,6 @@
 import { env } from '../config/env.js';
 import { getSupabaseClient } from '../config/supabase.js';
+import type { Json } from '../types/database.types.js';
 
 const requiredTables = [
   'app_settings',
@@ -82,6 +83,61 @@ function assertAcyclic(topics: readonly TopicRow[]): void {
   }
 }
 
+async function verifyMarksAwardedContract(
+  client: NonNullable<ReturnType<typeof getSupabaseClient>>,
+  subjectId: string,
+  topicId: string
+): Promise<void> {
+  let questionId: string | null = null;
+  let testId: string | null = null;
+  let attemptId: string | null = null;
+  let answerId: string | null = null;
+  let verificationError: unknown;
+  try {
+    const question = await client.from('questions').insert({
+      subject_id: subjectId, topic_id: topicId, question_text: 'Temporary V1.9 schema verifier',
+      question_type: 'MCQ', marks: 1, correct_answer: { optionKeys: ['A'] } as Json
+    }).select('id').single();
+    assert(!question.error && question.data, 'Could not create temporary scoring-schema question.');
+    questionId = question.data.id;
+    const test = await client.from('tests').insert({ name: 'Temporary V1.9 schema verifier', test_type: 'CUSTOM', duration_minutes: 1, total_marks: 1 }).select('id').single();
+    assert(!test.error && test.data, 'Could not create temporary scoring-schema test.');
+    testId = test.data.id;
+    const link = await client.from('test_questions').insert({ test_id: testId, question_id: questionId, position: 1 });
+    assert(!link.error, 'Could not create temporary scoring-schema test link.');
+    const attempt = await client.from('attempts').insert({ test_id: testId, status: 'IN_PROGRESS' }).select('id').single();
+    assert(!attempt.error && attempt.data, 'Could not create temporary scoring-schema attempt.');
+    attemptId = attempt.data.id;
+    const answer = await client.from('answers').insert({ attempt_id: attemptId, question_id: questionId, submitted_answer: { optionKeys: ['B'] } as Json }).select('id,marks_awarded').single();
+    assert(!answer.error && answer.data, 'Could not create temporary scoring-schema answer.');
+    assert(answer.data.marks_awarded === null, 'answers.marks_awarded must allow NULL.');
+    answerId = answer.data.id;
+
+    const third = await client.from('answers').update({ marks_awarded: -0.333333 }).eq('id', answerId).select('marks_awarded').single();
+    assert(!third.error && third.data?.marks_awarded === -0.333333, 'answers.marks_awarded must preserve six-decimal negative thirds.');
+    const lowerBound = await client.from('answers').update({ marks_awarded: -0.666667 }).eq('id', answerId).select('marks_awarded').single();
+    assert(!lowerBound.error && lowerBound.data?.marks_awarded === -0.666667, 'answers.marks_awarded must accept the canonical lower bound.');
+    const oneMark = await client.from('answers').update({ marks_awarded: 1 }).eq('id', answerId).select('marks_awarded').single();
+    assert(!oneMark.error && oneMark.data?.marks_awarded === 1, 'answers.marks_awarded must accept one mark.');
+    const upperBound = await client.from('answers').update({ marks_awarded: 2 }).eq('id', answerId).select('marks_awarded').single();
+    assert(!upperBound.error && upperBound.data?.marks_awarded === 2, 'answers.marks_awarded must accept the canonical upper bound.');
+    const tooLow = await client.from('answers').update({ marks_awarded: -0.666668 }).eq('id', answerId);
+    assert(Boolean(tooLow.error), 'answers.marks_awarded accepted a value below the canonical lower bound.');
+    const tooHigh = await client.from('answers').update({ marks_awarded: 2.000001 }).eq('id', answerId);
+    assert(Boolean(tooHigh.error), 'answers.marks_awarded accepted a value above the canonical upper bound.');
+  } catch (error) {
+    verificationError = error;
+  } finally {
+    let cleanupFailed = false;
+    if (attemptId) { const result = await client.from('attempts').delete().eq('id', attemptId); cleanupFailed ||= Boolean(result.error); }
+    if (testId) { const result = await client.from('tests').delete().eq('id', testId); cleanupFailed ||= Boolean(result.error); }
+    if (questionId) { const result = await client.from('questions').delete().eq('id', questionId); cleanupFailed ||= Boolean(result.error); }
+    if (answerId) { const result = await client.from('answers').select('id').eq('id', answerId).maybeSingle(); cleanupFailed ||= Boolean(result.error || result.data); }
+    if (cleanupFailed) throw new Error('Scoring-schema verifier cleanup failed.');
+  }
+  if (verificationError) throw verificationError;
+}
+
 async function main(): Promise<void> {
   assert(env.supabaseUrl, 'SUPABASE_URL is required.');
   assert(env.supabaseSecretKey, 'SUPABASE_SECRET_KEY is required.');
@@ -136,6 +192,7 @@ async function main(): Promise<void> {
     }
   }
   assertAcyclic(topics);
+  await verifyMarksAwardedContract(client, topics[0]!.subject_id, topics[0]!.id);
 
   console.log(JSON.stringify({
     status: 'PASS',
@@ -145,7 +202,12 @@ async function main(): Promise<void> {
     duplicateSubjectCodes: 0,
     duplicateTopicCodes: 0,
     brokenParents: 0,
-    cycles: 0
+    cycles: 0,
+    scoringMarksPrecision: 6,
+    scoringMarksBounds: [-0.666667, 2],
+    scoringMarksNullAllowed: true,
+    scoringMarksAccepted: [-0.333333, -0.666667, 1, 2],
+    temporaryRowsRemoved: true
   }, null, 2));
 }
 
