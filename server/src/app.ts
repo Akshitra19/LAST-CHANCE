@@ -10,6 +10,7 @@ import { topicsRouter } from './routes/topics.routes.js';
 import { dailyTasksRouter } from './routes/daily-tasks.routes.js';
 import { questionsRouter } from './routes/questions.routes.js';
 import { testsRouter } from './routes/tests.routes.js';
+import { attemptsRouter } from './routes/attempts.routes.js';
 
 export const app = express();
 
@@ -30,6 +31,7 @@ app.use('/api/topics', topicsRouter);
 app.use('/api/daily-tasks', dailyTasksRouter);
 app.use('/api/questions', questionsRouter);
 app.use('/api/tests', testsRouter);
+app.use('/api', attemptsRouter);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

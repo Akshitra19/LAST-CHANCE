@@ -1,6 +1,6 @@
 import type { QuestionDifficulty, QuestionRef, QuestionType } from './question';
 export const testTypes=['TOPIC','CUSTOM','FULL_MOCK']as const;export type TestType=typeof testTypes[number];
-export type TestSummary={id:string;name:string;testType:TestType;durationMinutes:number;totalMarks:number;questionCount:number;hasAttempts:boolean;locked:boolean;createdAt:string;updatedAt:string};
+export type TestSummary={id:string;name:string;testType:TestType;durationMinutes:number;totalMarks:number;questionCount:number;attemptCount:number;activeAttemptId:string|null;latestAttemptStatus:'IN_PROGRESS'|'SUBMITTED'|null;hasAttempts:boolean;locked:boolean;createdAt:string;updatedAt:string};
 export type TestQuestionSummary={id:string;position:number;questionText:string;questionType:QuestionType;marks:1|2;difficulty:QuestionDifficulty|null;subject:QuestionRef;topic:QuestionRef;hasImage:boolean;archived:boolean};
 export type TestDetail=TestSummary&{questions:TestQuestionSummary[]};
 export type TestList={items:TestSummary[];page:number;pageSize:number;total:number;totalPages:number};

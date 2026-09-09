@@ -3,6 +3,7 @@ import type { SettingsData, SettingsPatch } from '../types/settings';
 import type { CreateDailyTaskInput, DailyTask, DailyTaskStatus, UpdateDailyTaskInput } from '../types/daily-task';
 import type { CreateQuestionInput, QuestionDetail, QuestionFilters, QuestionList, UpdateQuestionInput } from '../types/question';
 import type { CreateTestInput, TestDetail, TestFilters, TestList, UpdateTestInput } from '../types/test';
+import type { SaveAttemptAnswerInput, SavedAttemptAnswer, TestAttempt } from '../types/attempt';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -78,3 +79,7 @@ export async function getTest(id:string,signal?:AbortSignal):Promise<TestDetail>
 export async function createTest(input:CreateTestInput):Promise<TestDetail>{return readData<TestDetail>(await fetch(`${apiBaseUrl}/api/tests`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
 export async function updateTest(id:string,input:UpdateTestInput):Promise<TestDetail>{return readData<TestDetail>(await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(id)}`,{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
 export async function deleteTest(id:string):Promise<void>{const response=await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(id)}`,{method:'DELETE'});if(!response.ok){let payload:unknown;try{payload=await response.json()}catch{payload=null}const error=payload&&typeof payload==='object'&&'error'in payload?(payload as{error?:{message?:unknown;code?:unknown}}).error:undefined;throw new ApiError(typeof error?.message==='string'?error.message:'The test could not be deleted.',response.status,typeof error?.code==='string'?error.code:undefined)}}
+export async function startAttempt(testId:string):Promise<TestAttempt>{return readData<TestAttempt>(await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(testId)}/attempts`,{method:'POST'}))}
+export async function getAttempt(attemptId:string,signal?:AbortSignal):Promise<TestAttempt>{return readData<TestAttempt>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}`,{signal}))}
+export async function saveAttemptAnswer(attemptId:string,questionId:string,input:SaveAttemptAnswerInput):Promise<SavedAttemptAnswer>{return readData<SavedAttemptAnswer>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}/answers/${encodeURIComponent(questionId)}`,{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
+export async function submitAttempt(attemptId:string):Promise<TestAttempt>{return readData<TestAttempt>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}/submit`,{method:'POST'}))}

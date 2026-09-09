@@ -8,6 +8,8 @@ import { TestPage } from '../pages/TestPage';
 import { SettingsPage } from '../pages/SettingsPage';
 import { QuestionBankPage } from '../pages/QuestionBankPage';
 import { TestBuilderPage } from '../pages/TestBuilderPage';
+import { TestStartPage } from '../pages/TestStartPage';
+import { AttemptPage } from '../pages/AttemptPage';
 
 export function AppRouter() {
   return (
@@ -18,11 +20,13 @@ export function AppRouter() {
         <Route path="test" element={<TestPage />} />
         <Route path="tests/new" element={<TestBuilderPage />} />
         <Route path="tests/:testId/edit" element={<TestBuilderPage />} />
+        <Route path="tests/:testId/start" element={<TestStartPage />} />
         <Route path="questions" element={<QuestionBankPage />} />
         <Route path="syllabus" element={<SyllabusPage />} />
         <Route path="more" element={<MorePage />} />
         <Route path="settings" element={<SettingsPage />} />
       </Route>
+      <Route path="attempts/:attemptId" element={<AttemptPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

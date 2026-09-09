@@ -39,6 +39,7 @@ npm run verify:planner
 npm run setup:question-storage
 npm run verify:questions
 npm run verify:tests
+npm run verify:attempts
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -79,4 +80,8 @@ The `/questions` route provides a server-backed Question Bank for MCQ, MSQ, and 
 
 ## V1.7 test creation
 
-The `/test` library and `/tests/new` builder create saved Topic Tests, mixed Custom Tests, and manually composed GATE Full Mock definitions. Question selection is explicit and ordered, while total marks and contiguous positions are assigned from canonical database rows by the server. Full Mocks enforce the 65-question, 100-mark, 180-minute GA/Engineering Mathematics/Core CS structure without inventing per-subject distributions. Unused tests can be edited or deleted; a test becomes immutable after its first attempt, and questions used by attempted tests protect their content and image while still allowing archive/restore. `npm run verify:tests` exercises the real API, official domain rules, locks, answer-free payloads, ordering, and complete cleanup. Actual test-taking is intentionally deferred to V1.8.
+The `/test` library and `/tests/new` builder create saved Topic Tests, mixed Custom Tests, and manually composed GATE Full Mock definitions. Question selection is explicit and ordered, while total marks and contiguous positions are assigned from canonical database rows by the server. Full Mocks enforce the 65-question, 100-mark, 180-minute GA/Engineering Mathematics/Core CS structure without inventing per-subject distributions. Unused tests can be edited or deleted; a test becomes immutable after its first attempt, and questions used by attempted tests protect their content and image while still allowing archive/restore. `npm run verify:tests` exercises the real API, official domain rules, locks, answer-free payloads, ordering, and complete cleanup.
+
+## V1.8 test engine
+
+Saved tests now support Start, Continue, and fresh Retake flows. The focused exam route handles MCQ, MSQ, and NAT responses, Clear Answer, Mark for Review, question navigation, a responsive palette, private question images, and failure-aware autosave. Its countdown and manual/automatic submission are server-authoritative: leaving or refreshing never pauses the deadline, while persisted answers, review flags, and per-question time restore on Continue. `npm run verify:attempts` exercises the real API and database contracts, safety boundaries, expiry, submission, retake behavior, and complete temporary-data cleanup. Scoring begins in V1.9; V1.8 intentionally leaves all score, correctness, and marks-awarded fields null.
