@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { getSupabaseClient } from '../config/supabase.js';
 import { AppError } from '../errors/app-error.js';
-import { getQuestionRowForImage, setQuestionImagePath } from './questions.service.js';
+import { assertQuestionContentMutable, getQuestionRowForImage, setQuestionImagePath } from './questions.service.js';
 
 export const questionImageBucket = 'question-images';
 export const questionImageMaxBytes = 5 * 1024 * 1024;
@@ -41,7 +41,7 @@ async function uploadObject(path: string, body: Buffer, mime: ImageMime): Promis
 export async function removeQuestionImageObject(path: string): Promise<void> { const { error } = await storage().from(questionImageBucket).remove([path]); if (error) storageFailed(); }
 
 export async function replaceQuestionImage(questionId: string, body: Buffer, contentType: string | undefined) {
-  const question = await getQuestionRowForImage(questionId); const mime = validateQuestionImage(body, contentType); const newPath = `questions/${questionId}/${randomUUID()}.${extension(mime)}`;
+  const question = await getQuestionRowForImage(questionId); await assertQuestionContentMutable(questionId); const mime = validateQuestionImage(body, contentType); const newPath = `questions/${questionId}/${randomUUID()}.${extension(mime)}`;
   await uploadObject(newPath, body, mime);
   try { await setQuestionImagePath(questionId, newPath); }
   catch (error) { try { await removeQuestionImageObject(newPath); } catch { console.error('New question image cleanup failed.'); } throw error; }
@@ -49,5 +49,5 @@ export async function replaceQuestionImage(questionId: string, body: Buffer, con
   return { hasImage: true, imageUrl: `/api/questions/${questionId}/image` };
 }
 export async function downloadQuestionImage(questionId: string): Promise<{ body: Buffer; contentType: ImageMime }> { const question = await getQuestionRowForImage(questionId); if (!question.image_path) throw new AppError(404, 'QUESTION_IMAGE_NOT_FOUND', 'Question image was not found.'); const { data, error } = await storage().from(questionImageBucket).download(question.image_path); if (error || !data) throw new AppError(404, 'QUESTION_IMAGE_NOT_FOUND', 'Question image was not found.'); return { body: Buffer.from(await data.arrayBuffer()), contentType: mimeForPath(question.image_path) }; }
-export async function removeQuestionImage(questionId: string): Promise<void> { const question = await getQuestionRowForImage(questionId); if (!question.image_path) return; await setQuestionImagePath(questionId, null); try { await removeQuestionImageObject(question.image_path); } catch { console.error('Removed question image object cleanup failed.'); } }
+export async function removeQuestionImage(questionId: string): Promise<void> { const question = await getQuestionRowForImage(questionId); await assertQuestionContentMutable(questionId); if (!question.image_path) return; await setQuestionImagePath(questionId, null); try { await removeQuestionImageObject(question.image_path); } catch { console.error('Removed question image object cleanup failed.'); } }
 export async function listQuestionImageObjects(questionId: string): Promise<string[]> { const prefix = `questions/${questionId}`; const { data, error } = await storage().from(questionImageBucket).list(prefix, { limit: 100 }); if (error) storageFailed(); return data.map((item) => `${prefix}/${item.name}`); }

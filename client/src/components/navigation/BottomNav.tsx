@@ -8,8 +8,8 @@ export function BottomNav() {
       <div className="bottom-nav__inner">
         {navigationItems.map((item) => (
           <NavLink
-            aria-current={item.label === 'Test' && pathname.startsWith('/questions') ? 'page' : undefined}
-            className={({ isActive }) => isActive || item.label === 'Test' && pathname.startsWith('/questions') ? 'bottom-nav__link bottom-nav__link--active' : 'bottom-nav__link'}
+            aria-current={item.label === 'Test' && (pathname.startsWith('/questions') || pathname.startsWith('/tests/')) ? 'page' : undefined}
+            className={({ isActive }) => isActive || item.label === 'Test' && (pathname.startsWith('/questions') || pathname.startsWith('/tests/')) ? 'bottom-nav__link bottom-nav__link--active' : 'bottom-nav__link'}
             end={item.end}
             key={item.to}
             to={item.to}

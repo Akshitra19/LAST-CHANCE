@@ -15,6 +15,7 @@
     "verify:planner": "npm run verify:planner --workspace server",
     "setup:question-storage": "npm run setup:question-storage --workspace server",
     "verify:questions": "npm run verify:questions --workspace server",
+    "verify:tests": "npm run verify:tests --workspace server",
     "validate:seed": "npm run validate:seed --workspace server"
   },
   "devDependencies": {

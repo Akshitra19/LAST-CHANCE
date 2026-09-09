@@ -38,6 +38,7 @@ npm run verify:api
 npm run verify:planner
 npm run setup:question-storage
 npm run verify:questions
+npm run verify:tests
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -75,3 +76,7 @@ The `/plan` route provides date-based task CRUD using the existing `daily_tasks`
 ## V1.6 question bank
 
 The `/questions` route provides a server-backed Question Bank for MCQ, MSQ, and NAT questions using the existing question schema. It includes syllabus-aware subject/topic selection, canonical answers, pagination and filters, editing, archive/restore, and one optional private image per question. Images are validated and served only through the backend; run `npm run setup:question-storage` to idempotently configure the private `question-images` bucket. `npm run verify:questions` exercises validation, CRUD transitions, filtering, private image lifecycle, and complete temporary-data cleanup. Open `http://localhost:4173/questions` while the local development servers are running.
+
+## V1.7 test creation
+
+The `/test` library and `/tests/new` builder create saved Topic Tests, mixed Custom Tests, and manually composed GATE Full Mock definitions. Question selection is explicit and ordered, while total marks and contiguous positions are assigned from canonical database rows by the server. Full Mocks enforce the 65-question, 100-mark, 180-minute GA/Engineering Mathematics/Core CS structure without inventing per-subject distributions. Unused tests can be edited or deleted; a test becomes immutable after its first attempt, and questions used by attempted tests protect their content and image while still allowing archive/restore. `npm run verify:tests` exercises the real API, official domain rules, locks, answer-free payloads, ordering, and complete cleanup. Actual test-taking is intentionally deferred to V1.8.

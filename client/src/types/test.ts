@@ -1,0 +1,10 @@
+import type { QuestionDifficulty, QuestionRef, QuestionType } from './question';
+export const testTypes=['TOPIC','CUSTOM','FULL_MOCK']as const;export type TestType=typeof testTypes[number];
+export type TestSummary={id:string;name:string;testType:TestType;durationMinutes:number;totalMarks:number;questionCount:number;hasAttempts:boolean;locked:boolean;createdAt:string;updatedAt:string};
+export type TestQuestionSummary={id:string;position:number;questionText:string;questionType:QuestionType;marks:1|2;difficulty:QuestionDifficulty|null;subject:QuestionRef;topic:QuestionRef;hasImage:boolean;archived:boolean};
+export type TestDetail=TestSummary&{questions:TestQuestionSummary[]};
+export type TestList={items:TestSummary[];page:number;pageSize:number;total:number;totalPages:number};
+export type TestFilters={page:number;pageSize:number;testType?:TestType};
+export type CreateTestInput={name:string;testType:TestType;durationMinutes?:number;questionIds:string[];topicId?:string};
+export type UpdateTestInput=Partial<CreateTestInput>;
+export type FullMockValidationResult={totalQuestions:number;totalMarks:number;gaQuestions:number;gaMarks:number;nonGaQuestions:number;nonGaMarks:number;engineeringMathMarks:number;coreCsQuestions:number;coreCsMarks:number;durationMinutes:number;valid:boolean;errors:string[]};

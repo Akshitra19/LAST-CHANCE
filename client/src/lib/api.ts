@@ -2,6 +2,7 @@ import type { SyllabusData, TopicStatus, TopicStatusResult } from '../types/syll
 import type { SettingsData, SettingsPatch } from '../types/settings';
 import type { CreateDailyTaskInput, DailyTask, DailyTaskStatus, UpdateDailyTaskInput } from '../types/daily-task';
 import type { CreateQuestionInput, QuestionDetail, QuestionFilters, QuestionList, UpdateQuestionInput } from '../types/question';
+import type { CreateTestInput, TestDetail, TestFilters, TestList, UpdateTestInput } from '../types/test';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -26,11 +27,11 @@ export async function getHealth(signal?: AbortSignal): Promise<HealthResponse> {
 }
 
 export class ApiError extends Error {
-  constructor(message: string, public readonly status?: number) { super(message); this.name = 'ApiError'; }
+  constructor(message: string, public readonly status?: number, public readonly code?: string) { super(message); this.name = 'ApiError'; }
 }
 
 async function readData<T>(response: Response): Promise<T> {
-  if (!response.ok) throw new ApiError('The request could not be completed.', response.status);
+  if (!response.ok) { let payload:unknown;try{payload=await response.json()}catch{payload=null}const error=payload&&typeof payload==='object'&&'error'in payload?(payload as{error?:{message?:unknown;code?:unknown}}).error:undefined;throw new ApiError(typeof error?.message==='string'?error.message:'The request could not be completed.',response.status,typeof error?.code==='string'?error.code:undefined); }
   const payload: unknown = await response.json();
   if (!payload || typeof payload !== 'object' || !('data' in payload)) throw new ApiError('The server returned an invalid response.');
   return (payload as { data: T }).data;
@@ -71,3 +72,9 @@ export async function updateQuestion(id:string,input:UpdateQuestionInput):Promis
 export async function uploadQuestionImage(id:string,file:File):Promise<{hasImage:true;imageUrl:string}>{return readData(await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image`,{method:'PUT',headers:{'content-type':file.type},body:file}));}
 export async function removeQuestionImage(id:string):Promise<void>{const response=await fetch(`${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image`,{method:'DELETE'});if(!response.ok)throw new ApiError('The image could not be removed.',response.status);}
 export function questionImageUrl(id:string,version?:string):string{return `${apiBaseUrl}/api/questions/${encodeURIComponent(id)}/image${version?`?v=${encodeURIComponent(version)}`:''}`;}
+
+export async function getTests(filters:TestFilters,signal?:AbortSignal):Promise<TestList>{const query=new URLSearchParams();for(const[key,value]of Object.entries(filters))if(value!==undefined)query.set(key,String(value));return readData<TestList>(await fetch(`${apiBaseUrl}/api/tests?${query}`,{signal}))}
+export async function getTest(id:string,signal?:AbortSignal):Promise<TestDetail>{return readData<TestDetail>(await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(id)}`,{signal}))}
+export async function createTest(input:CreateTestInput):Promise<TestDetail>{return readData<TestDetail>(await fetch(`${apiBaseUrl}/api/tests`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
+export async function updateTest(id:string,input:UpdateTestInput):Promise<TestDetail>{return readData<TestDetail>(await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(id)}`,{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
+export async function deleteTest(id:string):Promise<void>{const response=await fetch(`${apiBaseUrl}/api/tests/${encodeURIComponent(id)}`,{method:'DELETE'});if(!response.ok){let payload:unknown;try{payload=await response.json()}catch{payload=null}const error=payload&&typeof payload==='object'&&'error'in payload?(payload as{error?:{message?:unknown;code?:unknown}}).error:undefined;throw new ApiError(typeof error?.message==='string'?error.message:'The test could not be deleted.',response.status,typeof error?.code==='string'?error.code:undefined)}}

@@ -7,6 +7,7 @@ import { SyllabusPage } from '../pages/SyllabusPage';
 import { TestPage } from '../pages/TestPage';
 import { SettingsPage } from '../pages/SettingsPage';
 import { QuestionBankPage } from '../pages/QuestionBankPage';
+import { TestBuilderPage } from '../pages/TestBuilderPage';
 
 export function AppRouter() {
   return (
@@ -15,6 +16,8 @@ export function AppRouter() {
         <Route index element={<HomePage />} />
         <Route path="plan" element={<PlanPage />} />
         <Route path="test" element={<TestPage />} />
+        <Route path="tests/new" element={<TestBuilderPage />} />
+        <Route path="tests/:testId/edit" element={<TestBuilderPage />} />
         <Route path="questions" element={<QuestionBankPage />} />
         <Route path="syllabus" element={<SyllabusPage />} />
         <Route path="more" element={<MorePage />} />

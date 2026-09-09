@@ -1,5 +1,6 @@
 import { AppError } from '../errors/app-error.js';
 import { createQuestionRow, deleteQuestionOptions, deleteQuestionRowForCleanup, fetchQuestionRefs, findQuestionOptions, findQuestionRow, findSubjectRef, findTopicRef, insertQuestionOptions, listQuestionRows, updateQuestionRow, type QuestionOptionRow, type QuestionRow, type SubjectRef, type TopicRef } from '../repositories/questions.repository.js';
+import { questionHasAttempts } from '../repositories/tests.repository.js';
 import type { Json, TablesInsert, TablesUpdate } from '../types/database.types.js';
 import { desiredQuestionSchema, type CreateQuestion, type DesiredQuestion, type QuestionListQuery, type UpdateQuestion } from '../validation/questions.schemas.js';
 
@@ -39,6 +40,7 @@ function currentDesired(row: QuestionRow, options: QuestionOptionRow[]): Desired
 export async function updateQuestion(id: string, input: UpdateQuestion) {
   const row = await findQuestionRow(id); if (!row) throw new AppError(404, 'QUESTION_NOT_FOUND', 'Question was not found.'); const oldOptions = await findQuestionOptions(id); const current = currentDesired(row, oldOptions);
   const { archived: archiveChange, ...contentInput } = input;
+  if (Object.keys(contentInput).length > 0 && await questionHasAttempts(id)) throw new AppError(409, 'QUESTION_LOCKED_BY_ATTEMPT', 'This question belongs to an attempted test and its content can no longer be edited.');
   const nextType = contentInput.questionType ?? current.questionType;
   const nextOptions = contentInput.options ?? (nextType === 'NAT' ? [] : current.options);
   const desired = parseDesired({ ...current, ...contentInput, questionType: nextType, options: nextOptions, correctAnswer: contentInput.correctAnswer ?? current.correctAnswer });
@@ -59,3 +61,4 @@ export async function updateQuestion(id: string, input: UpdateQuestion) {
 
 export async function setQuestionImagePath(id: string, imagePath: string | null): Promise<QuestionRow> { const existing = await findQuestionRow(id); if (!existing) throw new AppError(404, 'QUESTION_NOT_FOUND', 'Question was not found.'); const saved = await updateQuestionRow(id, { image_path: imagePath, updated_at: new Date().toISOString() }); if (!saved) throw new AppError(404, 'QUESTION_NOT_FOUND', 'Question was not found.'); return saved; }
 export async function getQuestionRowForImage(id: string): Promise<QuestionRow> { const row = await findQuestionRow(id); if (!row) throw new AppError(404, 'QUESTION_NOT_FOUND', 'Question was not found.'); return row; }
+export async function assertQuestionContentMutable(id: string): Promise<void> { if (await questionHasAttempts(id)) throw new AppError(409, 'QUESTION_LOCKED_BY_ATTEMPT', 'This question belongs to an attempted test and its content can no longer be edited.'); }
