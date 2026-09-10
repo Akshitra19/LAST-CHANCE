@@ -10,6 +10,9 @@ import { QuestionBankPage } from '../pages/QuestionBankPage';
 import { TestBuilderPage } from '../pages/TestBuilderPage';
 import { TestStartPage } from '../pages/TestStartPage';
 import { AttemptPage } from '../pages/AttemptPage';
+import { MistakeBankPage } from '../pages/MistakeBankPage';
+import { ResultDetailPage } from '../pages/ResultDetailPage';
+import { ResultsPage } from '../pages/ResultsPage';
 
 export function AppRouter() {
   return (
@@ -25,6 +28,9 @@ export function AppRouter() {
         <Route path="syllabus" element={<SyllabusPage />} />
         <Route path="more" element={<MorePage />} />
         <Route path="settings" element={<SettingsPage />} />
+        <Route path="results" element={<ResultsPage />} />
+        <Route path="results/:attemptId" element={<ResultDetailPage />} />
+        <Route path="mistakes" element={<MistakeBankPage />} />
       </Route>
       <Route path="attempts/:attemptId" element={<AttemptPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

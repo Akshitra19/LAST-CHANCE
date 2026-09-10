@@ -4,6 +4,7 @@ import type { CreateDailyTaskInput, DailyTask, DailyTaskStatus, UpdateDailyTaskI
 import type { CreateQuestionInput, QuestionDetail, QuestionFilters, QuestionList, UpdateQuestionInput } from '../types/question';
 import type { CreateTestInput, TestDetail, TestFilters, TestList, UpdateTestInput } from '../types/test';
 import type { SaveAttemptAnswerInput, SavedAttemptAnswer, TestAttempt } from '../types/attempt';
+import type { MistakeFilters, MistakeList, MistakeType, MistakeUpdate, ResultDetail, ResultFilters, ResultList } from '../types/result';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -83,3 +84,7 @@ export async function startAttempt(testId:string):Promise<TestAttempt>{return re
 export async function getAttempt(attemptId:string,signal?:AbortSignal):Promise<TestAttempt>{return readData<TestAttempt>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}`,{signal}))}
 export async function saveAttemptAnswer(attemptId:string,questionId:string,input:SaveAttemptAnswerInput):Promise<SavedAttemptAnswer>{return readData<SavedAttemptAnswer>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}/answers/${encodeURIComponent(questionId)}`,{method:'PUT',headers:{'content-type':'application/json'},body:JSON.stringify(input)}))}
 export async function submitAttempt(attemptId:string):Promise<TestAttempt>{return readData<TestAttempt>(await fetch(`${apiBaseUrl}/api/attempts/${encodeURIComponent(attemptId)}/submit`,{method:'POST'}))}
+export async function getResults(filters:ResultFilters,signal?:AbortSignal):Promise<ResultList>{const query=new URLSearchParams();for(const[key,value]of Object.entries(filters))if(value!==undefined&&value!=='')query.set(key,String(value));return readData<ResultList>(await fetch(`${apiBaseUrl}/api/results?${query}`,{signal}))}
+export async function getResult(attemptId:string,signal?:AbortSignal):Promise<ResultDetail>{return readData<ResultDetail>(await fetch(`${apiBaseUrl}/api/results/${encodeURIComponent(attemptId)}`,{signal}))}
+export async function updateMistakeType(attemptId:string,questionId:string,mistakeType:MistakeType|null):Promise<MistakeUpdate>{return readData<MistakeUpdate>(await fetch(`${apiBaseUrl}/api/results/${encodeURIComponent(attemptId)}/questions/${encodeURIComponent(questionId)}/mistake`,{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify({mistakeType})}))}
+export async function getMistakes(filters:MistakeFilters,signal?:AbortSignal):Promise<MistakeList>{const query=new URLSearchParams();for(const[key,value]of Object.entries(filters))if(value!==undefined&&value!=='')query.set(key,String(value));return readData<MistakeList>(await fetch(`${apiBaseUrl}/api/mistakes?${query}`,{signal}))}

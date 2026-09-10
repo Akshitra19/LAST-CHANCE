@@ -17,6 +17,7 @@ export type Database = {
           is_correct: boolean | null
           marked_for_review: boolean
           marks_awarded: number | null
+          mistake_type: string | null
           question_id: string
           submitted_answer: Json
           time_seconds: number
@@ -29,6 +30,7 @@ export type Database = {
           is_correct?: boolean | null
           marked_for_review?: boolean
           marks_awarded?: number | null
+          mistake_type?: string | null
           question_id: string
           submitted_answer: Json
           time_seconds?: number
@@ -41,6 +43,7 @@ export type Database = {
           is_correct?: boolean | null
           marked_for_review?: boolean
           marks_awarded?: number | null
+          mistake_type?: string | null
           question_id?: string
           submitted_answer?: Json
           time_seconds?: number

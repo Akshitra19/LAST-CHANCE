@@ -41,6 +41,7 @@ npm run verify:questions
 npm run verify:tests
 npm run verify:attempts
 npm run verify:scoring
+npm run verify:results
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -90,3 +91,7 @@ Saved tests support Start, Continue, and fresh Retake flows. The focused exam ro
 ## V1.9 scoring engine
 
 Submitted attempts are scored authoritatively on the server. MCQs use official one-third negative marking, MSQs require exact-set equality with no partial or negative marks, and NAT answers use inclusive numeric ranges. The engine aggregates exact integer third-mark units and rounds the raw attempt score only once; it does not clamp negative totals. `npm run verify:scoring` covers pure domain rules and real submission, persistence, retry, integrity, privacy, and cleanup behavior. Results remain intentionally hidden from the exam UI; the Results and Mistakes experience begins in V1.10.
+
+## V1.10 results and mistakes
+
+Submitted tests now appear in paginated Result History with raw score, Correct/Wrong/Skipped counts, accuracy, time, per-subject facts, and ordered post-submission question review. Wrong and skipped historical answers can be classified into seven persisted mistake types and reviewed in Mistake Bank. Retry Selected deduplicates active questions and reuses the normal Custom Test flow. `npm run verify:results` exercises the real API/database result, privacy, classification, retry, and cleanup contracts. Longitudinal analytics begin in V1.11.

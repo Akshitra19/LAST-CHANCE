@@ -15,6 +15,7 @@
     "verify:tests": "tsx src/scripts/verify-tests.ts",
     "verify:attempts": "tsx src/scripts/verify-attempts.ts",
     "verify:scoring": "tsx src/scripts/verify-scoring.ts",
+    "verify:results": "tsx src/scripts/verify-results.ts",
     "validate:seed": "tsx src/scripts/validate-seed.ts",
     "start": "node dist/index.js"
   },

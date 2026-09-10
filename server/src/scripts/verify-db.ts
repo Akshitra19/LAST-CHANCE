@@ -83,7 +83,9 @@ function assertAcyclic(topics: readonly TopicRow[]): void {
   }
 }
 
-async function verifyMarksAwardedContract(
+const mistakeTypes = ['CONCEPT_GAP', 'FORMULA_FORGOTTEN', 'CALCULATION', 'MISREAD', 'GUESS', 'TIME_PRESSURE', 'RECALL_FAILURE'] as const;
+
+async function verifyAnswerResultContract(
   client: NonNullable<ReturnType<typeof getSupabaseClient>>,
   subjectId: string,
   topicId: string
@@ -108,9 +110,10 @@ async function verifyMarksAwardedContract(
     const attempt = await client.from('attempts').insert({ test_id: testId, status: 'IN_PROGRESS' }).select('id').single();
     assert(!attempt.error && attempt.data, 'Could not create temporary scoring-schema attempt.');
     attemptId = attempt.data.id;
-    const answer = await client.from('answers').insert({ attempt_id: attemptId, question_id: questionId, submitted_answer: { optionKeys: ['B'] } as Json }).select('id,marks_awarded').single();
-    assert(!answer.error && answer.data, 'Could not create temporary scoring-schema answer.');
+    const answer = await client.from('answers').insert({ attempt_id: attemptId, question_id: questionId, submitted_answer: { optionKeys: ['B'] } as Json }).select('id,marks_awarded,mistake_type').single();
+    assert(!answer.error && answer.data, `Could not create temporary answer-contract row: ${answer.error?.message ?? 'unknown error'}`);
     assert(answer.data.marks_awarded === null, 'answers.marks_awarded must allow NULL.');
+    assert(answer.data.mistake_type === null, 'answers.mistake_type must default to NULL.');
     answerId = answer.data.id;
 
     const third = await client.from('answers').update({ marks_awarded: -0.333333 }).eq('id', answerId).select('marks_awarded').single();
@@ -125,6 +128,23 @@ async function verifyMarksAwardedContract(
     assert(Boolean(tooLow.error), 'answers.marks_awarded accepted a value below the canonical lower bound.');
     const tooHigh = await client.from('answers').update({ marks_awarded: 2.000001 }).eq('id', answerId);
     assert(Boolean(tooHigh.error), 'answers.marks_awarded accepted a value above the canonical upper bound.');
+
+    const unscoredMistake = await client.from('answers').update({ marks_awarded: null, is_correct: null, mistake_type: 'CONCEPT_GAP' }).eq('id', answerId);
+    assert(Boolean(unscoredMistake.error), 'An unscored answer accepted a mistake classification.');
+    for (const mistakeType of mistakeTypes) {
+      const accepted = await client.from('answers').update({ marks_awarded: -0.333333, is_correct: false, mistake_type: mistakeType }).eq('id', answerId).select('mistake_type').single();
+      assert(!accepted.error && accepted.data?.mistake_type === mistakeType, `answers.mistake_type rejected ${mistakeType}.`);
+    }
+    const invalidMistake = await client.from('answers').update({ mistake_type: 'NOT_A_CATEGORY' }).eq('id', answerId);
+    assert(Boolean(invalidMistake.error), 'answers.mistake_type accepted an invalid category.');
+    const correctState = await client.from('answers').update({ marks_awarded: 1, is_correct: true, mistake_type: null }).eq('id', answerId);
+    assert(!correctState.error, 'Could not prepare a correct answer state.');
+    const correctMistake = await client.from('answers').update({ mistake_type: 'CONCEPT_GAP' }).eq('id', answerId);
+    assert(Boolean(correctMistake.error), 'A correct answer accepted a mistake classification.');
+    const skippedMistake = await client.from('answers').update({ marks_awarded: 0, is_correct: null, mistake_type: 'TIME_PRESSURE' }).eq('id', answerId).select('mistake_type').single();
+    assert(!skippedMistake.error && skippedMistake.data?.mistake_type === 'TIME_PRESSURE', 'A scored skipped answer rejected a valid mistake classification.');
+    const clearedMistake = await client.from('answers').update({ mistake_type: null }).eq('id', answerId).select('mistake_type').single();
+    assert(!clearedMistake.error && clearedMistake.data?.mistake_type === null, 'A mistake classification could not be cleared.');
   } catch (error) {
     verificationError = error;
   } finally {
@@ -192,7 +212,7 @@ async function main(): Promise<void> {
     }
   }
   assertAcyclic(topics);
-  await verifyMarksAwardedContract(client, topics[0]!.subject_id, topics[0]!.id);
+  await verifyAnswerResultContract(client, topics[0]!.subject_id, topics[0]!.id);
 
   console.log(JSON.stringify({
     status: 'PASS',
@@ -207,6 +227,12 @@ async function main(): Promise<void> {
     scoringMarksBounds: [-0.666667, 2],
     scoringMarksNullAllowed: true,
     scoringMarksAccepted: [-0.333333, -0.666667, 1, 2],
+    mistakeTypeNullable: true,
+    mistakeTypesAccepted: mistakeTypes.length,
+    mistakeConstraintCorrectRejected: true,
+    mistakeConstraintUnscoredRejected: true,
+    mistakeConstraintWrongAccepted: true,
+    mistakeConstraintSkippedAccepted: true,
     temporaryRowsRemoved: true
   }, null, 2));
 }
