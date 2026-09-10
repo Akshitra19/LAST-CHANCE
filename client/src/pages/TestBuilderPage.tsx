@@ -4,6 +4,7 @@ import { createTest, getQuestions, getSyllabus, getTest, updateTest } from '../l
 import { validateFullMock } from '../lib/full-mock';
 import { questionDifficulties, questionTypes, type QuestionFilters, type QuestionList, type QuestionListItem } from '../types/question';
 import type { SyllabusData, SyllabusTopic } from '../types/syllabus';
+import { useUnsavedChanges } from '../components/experience/ExperienceProvider';
 import { type CreateTestInput, type TestQuestionSummary, type TestType } from '../types/test';
 
 type SelectedQuestion=Pick<QuestionListItem,'id'|'questionText'|'questionType'|'marks'|'difficulty'|'subject'|'topic'|'hasImage'|'archived'>;
@@ -12,6 +13,7 @@ function flattenTopics(topics:SyllabusTopic[],prefix=''):Array<{id:string;label:
 function selected(question:QuestionListItem|TestQuestionSummary):SelectedQuestion{return{id:question.id,questionText:question.questionText,questionType:question.questionType,marks:question.marks,difficulty:question.difficulty,subject:question.subject,topic:question.topic,hasImage:question.hasImage,archived:question.archived}}
 
 export function TestBuilderPage(){const{testId}=useParams();const navigate=useNavigate();const[syllabus,setSyllabus]=useState<SyllabusData|null>(null),[name,setName]=useState(''),[testType,setTestType]=useState<TestType>('CUSTOM'),[duration,setDuration]=useState('30'),[subjectId,setSubjectId]=useState(''),[topicId,setTopicId]=useState(''),[chosen,setChosen]=useState<SelectedQuestion[]>([]),[filters,setFilters]=useState<QuestionFilters>({page:1,pageSize:20,archived:false}),[questions,setQuestions]=useState<QuestionList|null>(null),[questionState,setQuestionState]=useState<'loading'|'ready'|'error'>('loading'),[pageState,setPageState]=useState<'loading'|'ready'|'error'|'locked'>(testId?'loading':'ready'),[saving,setSaving]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState('');
+useUnsavedChanges('test-builder',pageState==='ready'&&(name.trim().length>0||chosen.length>0));
 useEffect(()=>{void getSyllabus().then(setSyllabus).catch(()=>setSyllabus(null))},[]);useEffect(()=>{if(!testId)return;const controller=new AbortController();void getTest(testId,controller.signal).then((test)=>{if(test.locked){setPageState('locked');return}setName(test.name);setTestType(test.testType);setDuration(String(test.durationMinutes));setChosen(test.questions.map(selected));if(test.testType==='TOPIC'&&test.questions[0]){setSubjectId(test.questions[0].subject.id);setTopicId(test.questions[0].topic.id)}setPageState('ready')}).catch(()=>{if(!controller.signal.aborted)setPageState('error')});return()=>controller.abort()},[testId]);
 const subject=syllabus?.subjects.find((item)=>item.id===subjectId),topics=subject?flattenTopics(subject.topics):[],filterSubject=syllabus?.subjects.find((item)=>item.id===filters.subjectId),filterTopics=filterSubject?flattenTopics(filterSubject.topics):[];
 const effectiveFilters=useMemo<QuestionFilters>(()=>testType==='TOPIC'?{...filters,subjectId:subjectId||undefined,topicId:topicId||undefined,archived:false}:{...filters,archived:false},[filters,subjectId,testType,topicId]);

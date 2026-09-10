@@ -14,6 +14,13 @@
   --nav-height: 72px;
   --sidebar-width: 224px;
   --radius: 18px;
+  --motion-instant: 110ms;
+  --motion-micro: 150ms;
+  --motion-standard: 200ms;
+  --motion-layout: 270ms;
+  --motion-reveal: 360ms;
+  --motion-signature: 1050ms;
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

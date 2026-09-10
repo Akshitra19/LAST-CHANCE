@@ -20,6 +20,7 @@
     "verify:scoring": "npm run verify:scoring --workspace server",
     "verify:results": "npm run verify:results --workspace server",
     "verify:analytics": "npm run verify:analytics --workspace server",
+    "verify:experience": "node client/scripts/verify-experience.mjs",
     "validate:seed": "npm run validate:seed --workspace server"
   },
   "devDependencies": {

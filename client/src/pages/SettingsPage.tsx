@@ -2,6 +2,8 @@ import { type FormEvent, useCallback, useEffect, useMemo, useState } from 'react
 import { getSettings, updateSettings } from '../lib/api';
 import { parseDateOnly } from '../lib/date-only';
 import type { SettingsData, SettingsPatch } from '../types/settings';
+import { useUnsavedChanges } from '../components/experience/ExperienceProvider';
+import { DelayedPageSkeleton } from '../components/feedback/Loading';
 
 type FormValues = { examDate: string; targetMarks: string; weekdayStudyHours: string; sundayStudyHours: string; mondayStudyHours: string };
 const toForm = (data: SettingsData): FormValues => ({ examDate: data.examDate ?? '', targetMarks: String(data.targetMarks), weekdayStudyHours: String(data.weekdayStudyHours), sundayStudyHours: String(data.sundayStudyHours), mondayStudyHours: String(data.mondayStudyHours) });
@@ -25,6 +27,7 @@ export function SettingsPage() {
   useEffect(() => { void load(); }, [load]);
   const errors = useMemo(() => values ? validate(values) : {}, [values]);
   const dirty = Boolean(settings && values && JSON.stringify(values) !== JSON.stringify(toForm(settings)));
+  useUnsavedChanges('settings', dirty);
   const change = (key: keyof FormValues, value: string) => { setValues((current) => current ? { ...current, [key]: value } : current); setSaveMessage(''); };
   const submit = async (event: FormEvent) => {
     event.preventDefault(); if (!settings || !values || !dirty || saving || Object.keys(errors).length) return;
@@ -38,7 +41,7 @@ export function SettingsPage() {
     finally { setSaving(false); }
   };
   return <section className="settings-page" aria-labelledby="settings-title"><p className="eyebrow">LAST CHANCE</p><h1 id="settings-title">Settings</h1>
-    {loading && <p className="panel-state" role="status">Loading settings…</p>}
+    <DelayedPageSkeleton cards={2} label="Loading settings" pending={loading}/>
     {!loading && loadError && <div className="panel-state" role="alert"><p>Couldn’t load settings.</p><button className="retry-button" onClick={() => void load()} type="button">Retry</button></div>}
     {!loading && settings && values && <form className="settings-form" onSubmit={(event) => void submit(event)} noValidate>
       <fieldset><legend>Exam</legend><div className="form-field"><label htmlFor="exam-name">Exam name</label><input id="exam-name" readOnly value={settings.examName} /></div><div className="form-field"><label htmlFor="exam-date">Exam date</label><input aria-describedby={errors.examDate ? 'exam-date-error' : undefined} id="exam-date" onChange={(event) => change('examDate', event.target.value)} type="date" value={values.examDate} />{errors.examDate && <span className="field-error" id="exam-date-error">{errors.examDate}</span>}</div></fieldset>

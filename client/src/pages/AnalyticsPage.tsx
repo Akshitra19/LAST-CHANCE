@@ -3,6 +3,7 @@ import { AnalyticsFilters } from '../components/analytics/AnalyticsFilters';
 import { MistakeChart, OutcomesChart, PerformanceChart, StudyChart, SubjectChart, SyllabusChart } from '../components/analytics/AnalyticsCharts';
 import { getAnalytics } from '../lib/api';
 import type { AnalyticsRange, AnalyticsResponse, AnalyticsTestType } from '../types/analytics';
+import { DelayedPageSkeleton, InlineSpinner } from '../components/feedback/Loading';
 
 const pct = (value: number | null) => value === null ? '—' : `${value.toFixed(2)}%`;
 const study = (minutes: number) => minutes < 60 ? `${minutes} min` : `${Math.floor(minutes / 60)}h ${minutes % 60}m`;
@@ -12,14 +13,14 @@ const highlightValue = (value: string) => value.replaceAll('_', ' ').toLowerCase
 export function AnalyticsPage() {
   const [range, setRange] = useState<AnalyticsRange>('30D'); const [testType, setTestType] = useState<AnalyticsTestType>('ALL');
   const [data, setData] = useState<AnalyticsResponse | null>(null); const [state, setState] = useState<'loading' | 'ready' | 'error'>('loading'); const [retry, setRetry] = useState(0);
-  const load = useCallback(async (signal?: AbortSignal) => { setState('loading'); setData(null); try { setData(await getAnalytics({ range, testType }, signal)); setState('ready'); } catch { if (!signal?.aborted) setState('error'); } }, [range, testType]);
+  const load = useCallback(async (signal?: AbortSignal) => { setState('loading'); try { setData(await getAnalytics({ range, testType }, signal)); setState('ready'); } catch { if (!signal?.aborted) setState('error'); } }, [range, testType]);
   useEffect(() => { const controller = new AbortController(); void load(controller.signal); return () => controller.abort(); }, [load, retry]);
   return <section aria-labelledby="analytics-title" className="analytics-page">
     <header className="analytics-header"><div><p className="eyebrow">PREPARATION · FACTS</p><h1 id="analytics-title">Analytics</h1><p>Track test performance, study consistency, mistakes, and syllabus progress.</p></div>{data && <p className="analytics-timezone">Calendar boundaries: Asia/Kolkata</p>}</header>
     <AnalyticsFilters disabled={state === 'loading'} onRange={setRange} onTestType={setTestType} range={range} testType={testType}/>
-    {state === 'loading' && <div aria-live="polite" className="analytics-state" role="status"><span className="analytics-spinner" aria-hidden="true"/>Loading analytics…</div>}
+    <DelayedPageSkeleton cards={4} label="Loading analytics" pending={state==='loading'&&!data}/>{state==='loading'&&data&&<InlineSpinner label="Updating analytics"/>}
     {state === 'error' && <div className="analytics-state" role="alert"><h2>Couldn’t load analytics.</h2><p>No metrics were substituted for the failed request.</p><button className="retry-button" onClick={() => setRetry((value) => value + 1)} type="button">Retry</button></div>}
-    {state === 'ready' && data && <>
+    {state !== 'error' && data && <div aria-busy={state==='loading'}>
       <section aria-label="Analytics summary" className="analytics-metrics">
         <article><span>Tests Completed</span><strong>{data.summary.testsCompleted}</strong><small>submitted tests</small></article>
         <article><span>Average Test Score</span><strong>{pct(data.summary.averageScorePercent)}</strong><small>mean of per-test percentages</small></article>
@@ -32,6 +33,6 @@ export function AnalyticsPage() {
       <div className="analytics-grid analytics-grid--paired"><MistakeChart data={data.mistakeBreakdown}/><SyllabusChart data={data.syllabusProgress}/></div>
       <section aria-labelledby="test-type-summary-title" className="analytics-table-card"><header><h2 id="test-type-summary-title">Test Type Summary</h2><p>Facts for the selected date and test-type filters.</p></header><div className="analytics-type-grid">{data.testTypeSummary.map((item) => <article key={item.testType}><h3>{testLabel(item.testType)}</h3><dl><div><dt>Tests</dt><dd>{item.testsCompleted}</dd></div><div><dt>Average score</dt><dd>{pct(item.averageScorePercent)}</dd></div><div><dt>Accuracy</dt><dd>{pct(item.accuracyPercent)}</dd></div></dl>{item.testsCompleted === 0 && <p>No data for these filters.</p>}</article>)}</div></section>
       <section aria-labelledby="highlights-title" className="analytics-table-card"><header><h2 id="highlights-title">Highlights</h2><p>Deterministic facts only — no predictions or recommendations.</p></header>{data.highlights.length ? <div className="analytics-highlights">{data.highlights.map((item) => <article key={item.key}><span>{item.label}</span><strong>{item.key === 'MOST_FREQUENT_MISTAKE' ? highlightValue(item.value) : item.value}</strong>{item.detail && <small>{item.detail}</small>}</article>)}</div> : <p className="analytics-empty">Complete tests or record Planner time to build factual highlights.</p>}</section>
-    </>}
+    </div>}
   </section>;
 }

@@ -1,23 +1,9 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { primarySection } from '../../lib/experience';
+import { NavIcon } from './NavIcon';
 import { navigationItems } from './navigation-items';
 
 export function BottomNav() {
-  const { pathname } = useLocation();
-  return (
-    <nav className="bottom-nav" aria-label="Primary navigation">
-      <div className="bottom-nav__inner">
-        {navigationItems.map((item) => (
-          <NavLink
-            aria-current={item.label === 'Test' && (pathname.startsWith('/questions') || pathname.startsWith('/tests/')) ? 'page' : undefined}
-            className={({ isActive }) => isActive || item.label === 'Test' && (pathname.startsWith('/questions') || pathname.startsWith('/tests/')) ? 'bottom-nav__link bottom-nav__link--active' : 'bottom-nav__link'}
-            end={item.end}
-            key={item.to}
-            to={item.to}
-          >
-            {item.label}
-          </NavLink>
-        ))}
-      </div>
-    </nav>
-  );
+  const activeSection = primarySection(useLocation().pathname);
+  return <nav className="bottom-nav" aria-label="Primary navigation"><div className="bottom-nav__inner">{navigationItems.map((item) => <Link aria-current={activeSection === item.label ? 'page' : undefined} className={activeSection === item.label ? 'bottom-nav__link bottom-nav__link--active' : 'bottom-nav__link'} key={item.to} to={item.to}><NavIcon name={item.label}/><span>{item.label}</span></Link>)}</div></nav>;
 }

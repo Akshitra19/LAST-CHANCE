@@ -1,5 +1,6 @@
 import { AppRouter } from './app/router';
+import { ExperienceProvider } from './components/experience/ExperienceProvider';
 
 export default function App() {
-  return <AppRouter />;
+  return <ExperienceProvider><AppRouter /></ExperienceProvider>;
 }
