@@ -19,6 +19,7 @@
     "verify:attempts": "npm run verify:attempts --workspace server",
     "verify:scoring": "npm run verify:scoring --workspace server",
     "verify:results": "npm run verify:results --workspace server",
+    "verify:analytics": "npm run verify:analytics --workspace server",
     "validate:seed": "npm run validate:seed --workspace server"
   },
   "devDependencies": {

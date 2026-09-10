@@ -12,6 +12,7 @@ import { questionsRouter } from './routes/questions.routes.js';
 import { testsRouter } from './routes/tests.routes.js';
 import { attemptsRouter } from './routes/attempts.routes.js';
 import { mistakesRouter, resultsRouter } from './routes/results.routes.js';
+import { analyticsRouter } from './routes/analytics.routes.js';
 
 export const app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/questions', questionsRouter);
 app.use('/api/tests', testsRouter);
 app.use('/api/results', resultsRouter);
 app.use('/api/mistakes', mistakesRouter);
+app.use('/api/analytics', analyticsRouter);
 app.use('/api', attemptsRouter);
 
 app.use(notFoundHandler);

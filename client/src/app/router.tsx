@@ -13,6 +13,7 @@ import { AttemptPage } from '../pages/AttemptPage';
 import { MistakeBankPage } from '../pages/MistakeBankPage';
 import { ResultDetailPage } from '../pages/ResultDetailPage';
 import { ResultsPage } from '../pages/ResultsPage';
+import { AnalyticsPage } from '../pages/AnalyticsPage';
 
 export function AppRouter() {
   return (
@@ -31,6 +32,7 @@ export function AppRouter() {
         <Route path="results" element={<ResultsPage />} />
         <Route path="results/:attemptId" element={<ResultDetailPage />} />
         <Route path="mistakes" element={<MistakeBankPage />} />
+        <Route path="analytics" element={<AnalyticsPage />} />
       </Route>
       <Route path="attempts/:attemptId" element={<AttemptPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />

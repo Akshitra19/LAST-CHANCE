@@ -5,6 +5,7 @@ import type { CreateQuestionInput, QuestionDetail, QuestionFilters, QuestionList
 import type { CreateTestInput, TestDetail, TestFilters, TestList, UpdateTestInput } from '../types/test';
 import type { SaveAttemptAnswerInput, SavedAttemptAnswer, TestAttempt } from '../types/attempt';
 import type { MistakeFilters, MistakeList, MistakeType, MistakeUpdate, ResultDetail, ResultFilters, ResultList } from '../types/result';
+import type { AnalyticsRange, AnalyticsResponse, AnalyticsTestType } from '../types/analytics';
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '');
 
@@ -88,3 +89,4 @@ export async function getResults(filters:ResultFilters,signal?:AbortSignal):Prom
 export async function getResult(attemptId:string,signal?:AbortSignal):Promise<ResultDetail>{return readData<ResultDetail>(await fetch(`${apiBaseUrl}/api/results/${encodeURIComponent(attemptId)}`,{signal}))}
 export async function updateMistakeType(attemptId:string,questionId:string,mistakeType:MistakeType|null):Promise<MistakeUpdate>{return readData<MistakeUpdate>(await fetch(`${apiBaseUrl}/api/results/${encodeURIComponent(attemptId)}/questions/${encodeURIComponent(questionId)}/mistake`,{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify({mistakeType})}))}
 export async function getMistakes(filters:MistakeFilters,signal?:AbortSignal):Promise<MistakeList>{const query=new URLSearchParams();for(const[key,value]of Object.entries(filters))if(value!==undefined&&value!=='')query.set(key,String(value));return readData<MistakeList>(await fetch(`${apiBaseUrl}/api/mistakes?${query}`,{signal}))}
+export async function getAnalytics(filters:{range:AnalyticsRange;testType:AnalyticsTestType},signal?:AbortSignal):Promise<AnalyticsResponse>{const query=new URLSearchParams({range:filters.range,testType:filters.testType});return readData<AnalyticsResponse>(await fetch(`${apiBaseUrl}/api/analytics?${query}`,{signal}))}

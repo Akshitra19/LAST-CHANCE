@@ -42,6 +42,7 @@ npm run verify:tests
 npm run verify:attempts
 npm run verify:scoring
 npm run verify:results
+npm run verify:analytics
 ```
 
 `npm run dev` starts the frontend and backend together. Open `http://localhost:4173`; do not open `client/dist/index.html` directly because Vite/PWA assets require an HTTP origin. API health is available at `http://localhost:3000/api/health`.
@@ -95,3 +96,7 @@ Submitted attempts are scored authoritatively on the server. MCQs use official o
 ## V1.10 results and mistakes
 
 Submitted tests now appear in paginated Result History with raw score, Correct/Wrong/Skipped counts, accuracy, time, per-subject facts, and ordered post-submission question review. Wrong and skipped historical answers can be classified into seven persisted mistake types and reviewed in Mistake Bank. Retry Selected deduplicates active questions and reuses the normal Custom Test flow. `npm run verify:results` exercises the real API/database result, privacy, classification, retry, and cleanup contracts. Longitudinal analytics begin in V1.11.
+
+## V1.11 preparation analytics
+
+Open `/analytics` from More to view read-only test performance, question outcomes, subject performance, Planner consistency, mistake reasons, and the current syllabus snapshot. Date filters are 7, 30, 90 days or all history; the test-type filter applies only to test-derived sections. Analytics is calculated on demand from the existing tables in Asia/Kolkata calendar boundaries—there is no analytics table, snapshot, cache, worker, or schema migration. `npm run verify:analytics` covers pure mathematics plus real database/API filters, privacy, read-only behavior, and cleanup.
