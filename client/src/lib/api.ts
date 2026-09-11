@@ -42,7 +42,7 @@ async function readData<T>(response: Response): Promise<T> {
 
 export async function getSyllabus(signal?: AbortSignal): Promise<SyllabusData> {
   const data = await readData<SyllabusData>(await fetch(`${apiBaseUrl}/api/syllabus`, { signal }));
-  if (data.version !== 'GATE_2027' || !Array.isArray(data.subjects) || data.subjectCount !== data.subjects.length || data.topicCount < 1) throw new ApiError('The syllabus response is invalid.');
+  if (data.version !== 'GATE_2027' || !Array.isArray(data.subjects) || data.subjectCount !== data.subjects.length || data.topicCount !== 173 || data.officialTopicCount !== data.topicCount || data.totalNodeCount !== data.topicCount + data.studySubtopicCount || data.actionableLeafCount < 1) throw new ApiError('The syllabus response is invalid.');
   return data;
 }
 
@@ -52,7 +52,7 @@ export async function updateTopicStatus(topicId: string, status: TopicStatus): P
 
 export async function getSettings(signal?: AbortSignal): Promise<SettingsData> {
   const data = await readData<SettingsData>(await fetch(`${apiBaseUrl}/api/settings`, { signal }));
-  if (!data || typeof data.examName !== 'string' || typeof data.targetMarks !== 'number') throw new ApiError('The settings response is invalid.');
+  if (!data || typeof data.examName !== 'string' || typeof data.targetMarks !== 'number' || typeof data.weekdayStudyHours !== 'number' || typeof data.saturdayStudyHours !== 'number' || typeof data.sundayStudyHours !== 'number' || typeof data.mondayStudyHours !== 'number') throw new ApiError('The settings response is invalid.');
   return data;
 }
 

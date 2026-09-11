@@ -1,0 +1,3646 @@
+{
+  "syllabusVersion": "GATE_2027",
+  "rawItemCount": 494,
+  "expectedPrepTopicCount": 493,
+  "groups": [
+    {
+      "parentCode": "CS-S1-DM-LOGIC",
+      "children": [
+        {
+          "name": "Propositions and connectives",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-PROPOSITIONS-AND-CONNECTIVES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Truth tables",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-TRUTH-TABLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Implication and equivalence",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-IMPLICATION-AND-EQUIVALENCE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Logical identities",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-LOGICAL-IDENTITIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Normal-form foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-NORMAL-FORM-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Predicates and quantifiers",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-PREDICATES-AND-QUANTIFIERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Logical inference",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S1-DM-LOGIC-LOGICAL-INFERENCE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-DM-SETS-RELATIONS-FUNCTIONS",
+      "children": [
+        {
+          "name": "Set operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-SET-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Cartesian products",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-CARTESIAN-PRODUCTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Relation properties",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-RELATION-PROPERTIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Equivalence relations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-EQUIVALENCE-RELATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Functions",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-FUNCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Function composition",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-FUNCTION-COMPOSITION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inverse functions",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-INVERSE-FUNCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "One-one functions",
+          "displayOrder": 8,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-ONE-ONE-FUNCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Onto functions",
+          "displayOrder": 9,
+          "code": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-ONTO-FUNCTIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-DM-PARTIAL-ORDERS-LATTICES",
+      "children": [
+        {
+          "name": "Posets",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-POSETS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Hasse diagrams",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-HASSE-DIAGRAMS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Lattices",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-LATTICES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-DM-MONOIDS-GROUPS",
+      "children": [
+        {
+          "name": "Binary operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-BINARY-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Monoids",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-MONOIDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Groups",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-GROUPS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING",
+      "children": [
+        {
+          "name": "Graph fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-GRAPH-FUNDAMENTALS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Paths and connectivity",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-PATHS-AND-CONNECTIVITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Connected components",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-CONNECTED-COMPONENTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Matching",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-MATCHING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Graph colouring",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-GRAPH-COLOURING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS",
+      "children": [
+        {
+          "name": "Basic counting principles",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-BASIC-COUNTING-PRINCIPLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Permutations and combinations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-PERMUTATIONS-AND-COMBINATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inclusion-exclusion",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-INCLUSION-EXCLUSION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recurrence formulation",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-RECURRENCE-FORMULATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Solving recurrence relations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-SOLVING-RECURRENCE-RELATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Generating functions",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-GENERATING-FUNCTIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-LA-MATRICES",
+      "children": [
+        {
+          "name": "Matrix operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-LA-MATRICES-MATRIX-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Transpose",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-LA-MATRICES-TRANSPOSE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inverse",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-LA-MATRICES-INVERSE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Elementary row operations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-LA-MATRICES-ELEMENTARY-ROW-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Rank",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-LA-MATRICES-RANK",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-LA-DETERMINANTS",
+      "children": [
+        {
+          "name": "Determinant evaluation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-LA-DETERMINANTS-DETERMINANT-EVALUATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Determinant properties",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-LA-DETERMINANTS-DETERMINANT-PROPERTIES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-LA-LINEAR-EQUATIONS",
+      "children": [
+        {
+          "name": "Gaussian elimination",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-GAUSSIAN-ELIMINATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Consistency of linear systems",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-CONSISTENCY-OF-LINEAR-SYSTEMS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Number and nature of solutions",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-NUMBER-AND-NATURE-OF-SOLUTIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-LA-EIGENVALUES-EIGENVECTORS",
+      "children": [
+        {
+          "name": "Characteristic equation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-CHARACTERISTIC-EQUATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Eigenvalues",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVALUES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Eigenvectors",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVECTORS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Eigenvalue/eigenvector properties",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVALUE-EIGENVECTOR-PROPERTIES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-LA-LU-DECOMPOSITION",
+      "children": [
+        {
+          "name": "LU factorization",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-LA-LU-DECOMPOSITION-LU-FACTORIZATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Solving systems using LU",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-LA-LU-DECOMPOSITION-SOLVING-SYSTEMS-USING-LU",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY",
+      "children": [
+        {
+          "name": "Standard limits",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-STANDARD-LIMITS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Limit evaluation",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-LIMIT-EVALUATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Continuity conditions",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-CONTINUITY-CONDITIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Derivatives",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-DERIVATIVES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Differentiability conditions",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-DIFFERENTIABILITY-CONDITIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-CA-MAXIMA-MINIMA",
+      "children": [
+        {
+          "name": "Critical points",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-CRITICAL-POINTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "First derivative test",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-FIRST-DERIVATIVE-TEST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Second derivative test",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-SECOND-DERIVATIVE-TEST",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-CA-MEAN-VALUE-THEOREM",
+      "children": [
+        {
+          "name": "Rolle theorem foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-CA-MEAN-VALUE-THEOREM-ROLLE-THEOREM-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Mean Value Theorem problems",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-CA-MEAN-VALUE-THEOREM-MEAN-VALUE-THEOREM-PROBLEMS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-CA-INTEGRATION",
+      "children": [
+        {
+          "name": "Basic integration",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-CA-INTEGRATION-BASIC-INTEGRATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Definite integration",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-CA-INTEGRATION-DEFINITE-INTEGRATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Properties of definite integrals",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-CA-INTEGRATION-PROPERTIES-OF-DEFINITE-INTEGRALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-PS-RANDOM-VARIABLES",
+      "children": [
+        {
+          "name": "Discrete random variables",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-DISCRETE-RANDOM-VARIABLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Continuous random variables",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-CONTINUOUS-RANDOM-VARIABLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "PMF foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-PMF-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "PDF foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-PDF-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CDF foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-CDF-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Expectation",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-EXPECTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Variance",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-VARIANCE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-PS-DISTRIBUTIONS",
+      "children": [
+        {
+          "name": "Uniform distribution",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-UNIFORM-DISTRIBUTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Binomial distribution",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-BINOMIAL-DISTRIBUTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Poisson distribution",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-POISSON-DISTRIBUTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Normal distribution",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-NORMAL-DISTRIBUTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Exponential distribution",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-EXPONENTIAL-DISTRIBUTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Mixed distribution problems",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-MIXED-DISTRIBUTION-PROBLEMS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-PS-DESCRIPTIVE-STATISTICS",
+      "children": [
+        {
+          "name": "Mean",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-MEAN",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Median",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-MEDIAN",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Mode",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-MODE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Variance",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-VARIANCE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Standard deviation",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-STANDARD-DEVIATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES",
+      "children": [
+        {
+          "name": "Conditional probability",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES-CONDITIONAL-PROBABILITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Total probability",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES-TOTAL-PROBABILITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Bayes theorem",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES-BAYES-THEOREM",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION",
+      "children": [
+        {
+          "name": "Boolean laws and identities",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-BOOLEAN-LAWS-AND-IDENTITIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Boolean expressions",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-BOOLEAN-EXPRESSIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "SOP foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-SOP-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "POS foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-POS-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Minterms",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-MINTERMS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Maxterms",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-MAXTERMS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Boolean minimization",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-BOOLEAN-MINIMIZATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-ALGEBRAIC-TECHNIQUE",
+      "children": [
+        {
+          "name": "Algebraic minimization",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-ALGEBRAIC-TECHNIQUE-ALGEBRAIC-MINIMIZATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-KARNAUGH-MAP",
+      "children": [
+        {
+          "name": "2-variable K-map",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-KARNAUGH-MAP-2-VARIABLE-K-MAP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "3-variable K-map",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-KARNAUGH-MAP-3-VARIABLE-K-MAP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "4-variable K-map",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-KARNAUGH-MAP-4-VARIABLE-K-MAP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Don't-care conditions",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S2-KARNAUGH-MAP-DONT-CARE-CONDITIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-TABULAR-METHOD",
+      "children": [
+        {
+          "name": "Quine-McCluskey foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-TABULAR-METHOD-QUINE-MCCLUSKEY-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-COMBINATIONAL-CIRCUITS",
+      "children": [
+        {
+          "name": "Adders",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-ADDERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Subtractors",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-SUBTRACTORS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multiplexers",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-MULTIPLEXERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Demultiplexers",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-DEMULTIPLEXERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Encoders",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-ENCODERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Decoders",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-DECODERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Comparators",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-COMPARATORS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-SEQUENTIAL-CIRCUITS",
+      "children": [
+        {
+          "name": "Latches",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-LATCHES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Flip-flops",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-FLIP-FLOPS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Registers",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-REGISTERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Counters",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-COUNTERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Sequential-state analysis",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-SEQUENTIAL-STATE-ANALYSIS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC",
+      "children": [
+        {
+          "name": "Signed-number representation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC-SIGNED-NUMBER-REPRESENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Complements",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC-COMPLEMENTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Fixed-point arithmetic",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC-FIXED-POINT-ARITHMETIC",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Overflow",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC-OVERFLOW",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S2-FLOATING-POINT-REPRESENTATION-ARITHMETIC",
+      "children": [
+        {
+          "name": "Floating-point representation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S2-FLOATING-POINT-REPRESENTATION-ARITHMETIC-FLOATING-POINT-REPRESENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Normalization",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S2-FLOATING-POINT-REPRESENTATION-ARITHMETIC-NORMALIZATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Floating-point arithmetic",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S2-FLOATING-POINT-REPRESENTATION-ARITHMETIC-FLOATING-POINT-ARITHMETIC",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-INSTRUCTION-SET",
+      "children": [
+        {
+          "name": "Instruction formats",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-INSTRUCTION-SET-INSTRUCTION-FORMATS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Instruction execution foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-INSTRUCTION-SET-INSTRUCTION-EXECUTION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-ADDRESSING-MODES",
+      "children": [
+        {
+          "name": "Immediate addressing",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-IMMEDIATE-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Direct addressing",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-DIRECT-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Indirect addressing",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-INDIRECT-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Register addressing",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-REGISTER-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Register-indirect addressing",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-REGISTER-INDIRECT-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Indexed and relative addressing foundations",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S3-ADDRESSING-MODES-INDEXED-AND-RELATIVE-ADDRESSING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-ALU",
+      "children": [
+        {
+          "name": "Arithmetic operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-ALU-ARITHMETIC-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Logic operations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-ALU-LOGIC-OPERATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-HARDWIRED-CONTROL",
+      "children": [
+        {
+          "name": "Hardwired control-signal generation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-HARDWIRED-CONTROL-HARDWIRED-CONTROL-SIGNAL-GENERATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-MICROPROGRAMMED-CONTROL",
+      "children": [
+        {
+          "name": "Microinstructions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-MICROPROGRAMMED-CONTROL-MICROINSTRUCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Control memory",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-MICROPROGRAMMED-CONTROL-CONTROL-MEMORY",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-MEMORY-INTERFACING",
+      "children": [
+        {
+          "name": "Memory interfacing fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-MEMORY-INTERFACING-MEMORY-INTERFACING-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-MEMORY-HIERARCHY-PERFORMANCE",
+      "children": [
+        {
+          "name": "Locality",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-MEMORY-HIERARCHY-PERFORMANCE-LOCALITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Memory hierarchy",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-MEMORY-HIERARCHY-PERFORMANCE-MEMORY-HIERARCHY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Average memory access time",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S3-MEMORY-HIERARCHY-PERFORMANCE-AVERAGE-MEMORY-ACCESS-TIME",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-CACHE-MEMORY-MAPPING",
+      "children": [
+        {
+          "name": "Direct mapping",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-DIRECT-MAPPING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Fully associative mapping",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-FULLY-ASSOCIATIVE-MAPPING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Set-associative mapping",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-SET-ASSOCIATIVE-MAPPING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Cache replacement",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-CACHE-REPLACEMENT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Cache write policies",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-CACHE-WRITE-POLICIES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-IO-INTERFACE",
+      "children": [
+        {
+          "name": "I/O interface fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-IO-INTERFACE-I-O-INTERFACE-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-INTERRUPT",
+      "children": [
+        {
+          "name": "Interrupt fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-INTERRUPT-INTERRUPT-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-DMA",
+      "children": [
+        {
+          "name": "DMA fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-DMA-DMA-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-INSTRUCTION-PIPELINING",
+      "children": [
+        {
+          "name": "Pipeline stages",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-INSTRUCTION-PIPELINING-PIPELINE-STAGES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pipeline throughput",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-INSTRUCTION-PIPELINING-PIPELINE-THROUGHPUT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pipeline speedup",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S3-INSTRUCTION-PIPELINING-PIPELINE-SPEEDUP",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S3-PIPELINE-HAZARDS",
+      "children": [
+        {
+          "name": "Structural hazards",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S3-PIPELINE-HAZARDS-STRUCTURAL-HAZARDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Data hazards",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S3-PIPELINE-HAZARDS-DATA-HAZARDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Control hazards",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S3-PIPELINE-HAZARDS-CONTROL-HAZARDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pipeline stalling",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S3-PIPELINE-HAZARDS-PIPELINE-STALLING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Forwarding foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S3-PIPELINE-HAZARDS-FORWARDING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-PROGRAMMING-C",
+      "children": [
+        {
+          "name": "C program structure",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-C-PROGRAM-STRUCTURE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Tokens, identifiers and keywords foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-TOKENS-IDENTIFIERS-AND-KEYWORDS-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Variables and constants",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-VARIABLES-AND-CONSTANTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Data types",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-DATA-TYPES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Type conversion and casting",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-TYPE-CONVERSION-AND-CASTING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Operators",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-OPERATORS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Operator precedence and associativity",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-OPERATOR-PRECEDENCE-AND-ASSOCIATIVITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Expressions",
+          "displayOrder": 8,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-EXPRESSIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Standard input and output",
+          "displayOrder": 9,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-STANDARD-INPUT-AND-OUTPUT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Conditional statements",
+          "displayOrder": 10,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-CONDITIONAL-STATEMENTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Switch statement",
+          "displayOrder": 11,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-SWITCH-STATEMENT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Loops",
+          "displayOrder": 12,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-LOOPS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Break and continue",
+          "displayOrder": 13,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-BREAK-AND-CONTINUE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Functions and prototypes",
+          "displayOrder": 14,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-FUNCTIONS-AND-PROTOTYPES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Parameter passing",
+          "displayOrder": 15,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-PARAMETER-PASSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Scope and lifetime",
+          "displayOrder": 16,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-SCOPE-AND-LIFETIME",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Storage-class foundations",
+          "displayOrder": 17,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-STORAGE-CLASS-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Arrays in C",
+          "displayOrder": 18,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-ARRAYS-IN-C",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multidimensional arrays",
+          "displayOrder": 19,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-MULTIDIMENSIONAL-ARRAYS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Character arrays and strings",
+          "displayOrder": 20,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-CHARACTER-ARRAYS-AND-STRINGS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pointer fundamentals",
+          "displayOrder": 21,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-FUNDAMENTALS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pointer arithmetic",
+          "displayOrder": 22,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-ARITHMETIC",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Arrays and pointers",
+          "displayOrder": 23,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-ARRAYS-AND-POINTERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pointer to pointer",
+          "displayOrder": 24,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-TO-POINTER",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pointers with functions",
+          "displayOrder": 25,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-POINTERS-WITH-FUNCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Function pointers foundations",
+          "displayOrder": 26,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-FUNCTION-POINTERS-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Structures",
+          "displayOrder": 27,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-STRUCTURES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Unions",
+          "displayOrder": 28,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-UNIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Enumerations",
+          "displayOrder": 29,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-ENUMERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Typedef foundations",
+          "displayOrder": 30,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-TYPEDEF-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Dynamic memory fundamentals",
+          "displayOrder": 31,
+          "code": "PREP-G27-CS-S4-PROGRAMMING-C-DYNAMIC-MEMORY-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-RECURSION",
+      "children": [
+        {
+          "name": "Base condition",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-RECURSION-BASE-CONDITION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recursive calls",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-RECURSION-RECURSIVE-CALLS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Call stack",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-RECURSION-CALL-STACK",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Return tracing",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-RECURSION-RETURN-TRACING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multiple recursive calls",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-RECURSION-MULTIPLE-RECURSIVE-CALLS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recursive program tracing",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S4-RECURSION-RECURSIVE-PROGRAM-TRACING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-ARRAYS",
+      "children": [
+        {
+          "name": "Array representation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-ARRAYS-ARRAY-REPRESENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Array operations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-ARRAYS-ARRAY-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "One-dimensional arrays",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-ARRAYS-ONE-DIMENSIONAL-ARRAYS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multidimensional arrays",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-ARRAYS-MULTIDIMENSIONAL-ARRAYS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Array address calculation",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-ARRAYS-ARRAY-ADDRESS-CALCULATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-STACKS",
+      "children": [
+        {
+          "name": "Stack operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-STACKS-STACK-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Array stack implementation",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-STACKS-ARRAY-STACK-IMPLEMENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Linked stack implementation",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-STACKS-LINKED-STACK-IMPLEMENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Stack applications",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-STACKS-STACK-APPLICATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-QUEUES",
+      "children": [
+        {
+          "name": "Queue operations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-QUEUES-QUEUE-OPERATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Linear queue",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-QUEUES-LINEAR-QUEUE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Circular queue",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-QUEUES-CIRCULAR-QUEUE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Deque foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-QUEUES-DEQUE-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Queue implementation",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-QUEUES-QUEUE-IMPLEMENTATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-LINKED-LISTS",
+      "children": [
+        {
+          "name": "Singly linked list",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-SINGLY-LINKED-LIST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Doubly linked list",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-DOUBLY-LINKED-LIST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Circular linked list",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-CIRCULAR-LINKED-LIST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Linked-list insertion",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-LINKED-LIST-INSERTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Linked-list deletion",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-LINKED-LIST-DELETION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Linked-list traversal",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S4-LINKED-LISTS-LINKED-LIST-TRAVERSAL",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-TREES",
+      "children": [
+        {
+          "name": "Tree terminology",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-TREES-TREE-TERMINOLOGY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Tree representation",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-TREES-TREE-REPRESENTATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Binary trees",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-TREES-BINARY-TREES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Preorder traversal",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-TREES-PREORDER-TRAVERSAL",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inorder traversal",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-TREES-INORDER-TRAVERSAL",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Postorder traversal",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S4-TREES-POSTORDER-TRAVERSAL",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Tree reconstruction",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S4-TREES-TREE-RECONSTRUCTION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-BINARY-SEARCH-TREES",
+      "children": [
+        {
+          "name": "BST search",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-BINARY-SEARCH-TREES-BST-SEARCH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "BST insertion",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-BINARY-SEARCH-TREES-BST-INSERTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "BST deletion",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-BINARY-SEARCH-TREES-BST-DELETION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "BST complexity",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-BINARY-SEARCH-TREES-BST-COMPLEXITY",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-BINARY-HEAPS",
+      "children": [
+        {
+          "name": "Min heap",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-BINARY-HEAPS-MIN-HEAP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Max heap",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-BINARY-HEAPS-MAX-HEAP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Heapify",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-BINARY-HEAPS-HEAPIFY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Heap insertion",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-BINARY-HEAPS-HEAP-INSERTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Heap delete and extract",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S4-BINARY-HEAPS-HEAP-DELETE-AND-EXTRACT",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S4-GRAPHS",
+      "children": [
+        {
+          "name": "Graph terminology",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S4-GRAPHS-GRAPH-TERMINOLOGY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Adjacency matrix",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S4-GRAPHS-ADJACENCY-MATRIX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Adjacency list",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S4-GRAPHS-ADJACENCY-LIST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Graph representation",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S4-GRAPHS-GRAPH-REPRESENTATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-SEARCHING",
+      "children": [
+        {
+          "name": "Linear search",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-SEARCHING-LINEAR-SEARCH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Binary search",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-SEARCHING-BINARY-SEARCH",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-SORTING",
+      "children": [
+        {
+          "name": "Bubble sort",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-SORTING-BUBBLE-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Selection sort",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-SORTING-SELECTION-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Insertion sort",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-SORTING-INSERTION-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Merge sort",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S5-SORTING-MERGE-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Quick sort",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S5-SORTING-QUICK-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Heap sort",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S5-SORTING-HEAP-SORT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Sorting stability",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S5-SORTING-SORTING-STABILITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "In-place sorting",
+          "displayOrder": 8,
+          "code": "PREP-G27-CS-S5-SORTING-IN-PLACE-SORTING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Comparison-based sorting foundations",
+          "displayOrder": 9,
+          "code": "PREP-G27-CS-S5-SORTING-COMPARISON-BASED-SORTING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-HASHING",
+      "children": [
+        {
+          "name": "Hash functions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-HASHING-HASH-FUNCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Collisions",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-HASHING-COLLISIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Chaining",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-HASHING-CHAINING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Open addressing",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S5-HASHING-OPEN-ADDRESSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Load factor",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S5-HASHING-LOAD-FACTOR",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-ASYMPTOTIC-WORST-CASE-TIME",
+      "children": [
+        {
+          "name": "Big-O",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-BIG-O",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Big-Omega",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-BIG-OMEGA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Big-Theta",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-BIG-THETA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Loop complexity analysis",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-LOOP-COMPLEXITY-ANALYSIS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recurrence-based complexity analysis",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-RECURRENCE-BASED-COMPLEXITY-ANALYSIS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-ASYMPTOTIC-WORST-CASE-SPACE",
+      "children": [
+        {
+          "name": "Auxiliary space",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-SPACE-AUXILIARY-SPACE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recursive stack space",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-SPACE-RECURSIVE-STACK-SPACE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Worst-case space analysis",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-SPACE-WORST-CASE-SPACE-ANALYSIS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-GREEDY",
+      "children": [
+        {
+          "name": "Greedy-choice principle",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-GREEDY-GREEDY-CHOICE-PRINCIPLE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Greedy problem solving",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-GREEDY-GREEDY-PROBLEM-SOLVING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-DYNAMIC-PROGRAMMING",
+      "children": [
+        {
+          "name": "Optimal substructure",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-OPTIMAL-SUBSTRUCTURE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Overlapping subproblems",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-OVERLAPPING-SUBPROBLEMS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Memoization",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-MEMOIZATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Tabulation",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-TABULATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "DP state and transition design",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-DP-STATE-AND-TRANSITION-DESIGN",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-DIVIDE-CONQUER",
+      "children": [
+        {
+          "name": "Divide-conquer-combine",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-DIVIDE-CONQUER-DIVIDE-CONQUER-COMBINE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Divide-and-conquer recurrence analysis",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-DIVIDE-CONQUER-DIVIDE-AND-CONQUER-RECURRENCE-ANALYSIS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-GRAPH-TRAVERSALS",
+      "children": [
+        {
+          "name": "BFS",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-GRAPH-TRAVERSALS-BFS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "DFS",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-GRAPH-TRAVERSALS-DFS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-MINIMUM-SPANNING-TREES",
+      "children": [
+        {
+          "name": "Prim algorithm",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-MINIMUM-SPANNING-TREES-PRIM-ALGORITHM",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Kruskal algorithm",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-MINIMUM-SPANNING-TREES-KRUSKAL-ALGORITHM",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S5-SHORTEST-PATHS",
+      "children": [
+        {
+          "name": "Dijkstra algorithm",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S5-SHORTEST-PATHS-DIJKSTRA-ALGORITHM",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Bellman-Ford foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S5-SHORTEST-PATHS-BELLMAN-FORD-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "All-pairs shortest-path foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S5-SHORTEST-PATHS-ALL-PAIRS-SHORTEST-PATH-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-REGULAR-EXPRESSIONS",
+      "children": [
+        {
+          "name": "Regular-expression construction",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-REGULAR-EXPRESSIONS-REGULAR-EXPRESSION-CONSTRUCTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Language represented by regular expressions",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-REGULAR-EXPRESSIONS-LANGUAGE-REPRESENTED-BY-REGULAR-EXPRESSIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Regular-expression and automata relationship",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-REGULAR-EXPRESSIONS-REGULAR-EXPRESSION-AND-AUTOMATA-RELATIONSHIP",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-FINITE-AUTOMATA",
+      "children": [
+        {
+          "name": "DFA",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-DFA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "NFA",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-NFA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Epsilon-NFA",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-EPSILON-NFA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "NFA to DFA conversion",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-NFA-TO-DFA-CONVERSION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "DFA minimization",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-DFA-MINIMIZATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Automata equivalence",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S6-FINITE-AUTOMATA-AUTOMATA-EQUIVALENCE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-CONTEXT-FREE-GRAMMARS",
+      "children": [
+        {
+          "name": "Productions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-PRODUCTIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Derivations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-DERIVATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Parse trees",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-PARSE-TREES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Ambiguity",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-AMBIGUITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CFG transformation foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-CFG-TRANSFORMATION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-PUSH-DOWN-AUTOMATA",
+      "children": [
+        {
+          "name": "PDA operation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-PUSH-DOWN-AUTOMATA-PDA-OPERATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "PDA construction",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-PUSH-DOWN-AUTOMATA-PDA-CONSTRUCTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "PDA acceptance",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-PUSH-DOWN-AUTOMATA-PDA-ACCEPTANCE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-REGULAR-LANGUAGES",
+      "children": [
+        {
+          "name": "Regular-language closure properties",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-REGULAR-LANGUAGES-REGULAR-LANGUAGE-CLOSURE-PROPERTIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Regular-language decision foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-REGULAR-LANGUAGES-REGULAR-LANGUAGE-DECISION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-CONTEXT-FREE-LANGUAGES",
+      "children": [
+        {
+          "name": "CFL properties",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-LANGUAGES-CFL-PROPERTIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CFL closure foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-CONTEXT-FREE-LANGUAGES-CFL-CLOSURE-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-PUMPING-LEMMA",
+      "children": [
+        {
+          "name": "Pumping lemma for regular languages",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-PUMPING-LEMMA-PUMPING-LEMMA-FOR-REGULAR-LANGUAGES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pumping lemma for context-free languages",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-PUMPING-LEMMA-PUMPING-LEMMA-FOR-CONTEXT-FREE-LANGUAGES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-TURING-MACHINES",
+      "children": [
+        {
+          "name": "Turing-machine model",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-TURING-MACHINES-TURING-MACHINE-MODEL",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Configurations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-TURING-MACHINES-CONFIGURATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Recognizers",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-TURING-MACHINES-RECOGNIZERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Deciders",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S6-TURING-MACHINES-DECIDERS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S6-UNDECIDABILITY",
+      "children": [
+        {
+          "name": "Decidable versus undecidable",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S6-UNDECIDABILITY-DECIDABLE-VERSUS-UNDECIDABLE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Reduction foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S6-UNDECIDABILITY-REDUCTION-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Halting-problem reasoning",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S6-UNDECIDABILITY-HALTING-PROBLEM-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-LEXICAL-ANALYSIS",
+      "children": [
+        {
+          "name": "Tokens",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-LEXICAL-ANALYSIS-TOKENS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Lexemes",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-LEXICAL-ANALYSIS-LEXEMES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Patterns",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-LEXICAL-ANALYSIS-PATTERNS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Regex and automata relationship",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S7-LEXICAL-ANALYSIS-REGEX-AND-AUTOMATA-RELATIONSHIP",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Lexical analyser",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S7-LEXICAL-ANALYSIS-LEXICAL-ANALYSER",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-PARSING",
+      "children": [
+        {
+          "name": "FIRST",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-PARSING-FIRST",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "FOLLOW",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-PARSING-FOLLOW",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Top-down parsing",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-PARSING-TOP-DOWN-PARSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "LL(1)",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S7-PARSING-LL-1",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Bottom-up parsing",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S7-PARSING-BOTTOM-UP-PARSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "LR(0)",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S7-PARSING-LR-0",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "SLR",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S7-PARSING-SLR",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CLR",
+          "displayOrder": 8,
+          "code": "PREP-G27-CS-S7-PARSING-CLR",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "LALR",
+          "displayOrder": 9,
+          "code": "PREP-G27-CS-S7-PARSING-LALR",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Shift-reduce foundations",
+          "displayOrder": 10,
+          "code": "PREP-G27-CS-S7-PARSING-SHIFT-REDUCE-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-SYNTAX-DIRECTED-TRANSLATION",
+      "children": [
+        {
+          "name": "Syntax-directed definitions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-SYNTAX-DIRECTED-TRANSLATION-SYNTAX-DIRECTED-DEFINITIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Attributes",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-SYNTAX-DIRECTED-TRANSLATION-ATTRIBUTES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Annotated parse trees",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-SYNTAX-DIRECTED-TRANSLATION-ANNOTATED-PARSE-TREES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-RUNTIME-ENVIRONMENTS",
+      "children": [
+        {
+          "name": "Activation records",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-RUNTIME-ENVIRONMENTS-ACTIVATION-RECORDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Storage allocation",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-RUNTIME-ENVIRONMENTS-STORAGE-ALLOCATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Parameter-passing foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-RUNTIME-ENVIRONMENTS-PARAMETER-PASSING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-INTERMEDIATE-CODE-GENERATION",
+      "children": [
+        {
+          "name": "Three-address code",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-INTERMEDIATE-CODE-GENERATION-THREE-ADDRESS-CODE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Quadruples",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-INTERMEDIATE-CODE-GENERATION-QUADRUPLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Triples",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-INTERMEDIATE-CODE-GENERATION-TRIPLES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Intermediate representations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S7-INTERMEDIATE-CODE-GENERATION-INTERMEDIATE-REPRESENTATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-LOCAL-OPTIMISATION",
+      "children": [
+        {
+          "name": "Basic blocks",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-LOCAL-OPTIMISATION-BASIC-BLOCKS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Local transformations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-LOCAL-OPTIMISATION-LOCAL-TRANSFORMATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Constant folding foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S7-LOCAL-OPTIMISATION-CONSTANT-FOLDING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-CONSTANT-PROPAGATION",
+      "children": [
+        {
+          "name": "Constant-propagation analysis",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-CONSTANT-PROPAGATION-CONSTANT-PROPAGATION-ANALYSIS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-LIVENESS-ANALYSIS",
+      "children": [
+        {
+          "name": "Liveness fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-LIVENESS-ANALYSIS-LIVENESS-FUNDAMENTALS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Live-variable reasoning",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-LIVENESS-ANALYSIS-LIVE-VARIABLE-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S7-COMMON-SUBEXPRESSION-ELIMINATION",
+      "children": [
+        {
+          "name": "Common-subexpression identification",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S7-COMMON-SUBEXPRESSION-ELIMINATION-COMMON-SUBEXPRESSION-IDENTIFICATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Common-subexpression elimination",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S7-COMMON-SUBEXPRESSION-ELIMINATION-COMMON-SUBEXPRESSION-ELIMINATION",
+          "existingOfficialCode": "CS-S7-COMMON-SUBEXPRESSION-ELIMINATION"
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-SYSTEM-CALLS",
+      "children": [
+        {
+          "name": "System-call types and use",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-SYSTEM-CALLS-SYSTEM-CALL-TYPES-AND-USE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-PROCESSES",
+      "children": [
+        {
+          "name": "Process states",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-PROCESSES-PROCESS-STATES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "PCB",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-PROCESSES-PCB",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Context switching",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-PROCESSES-CONTEXT-SWITCHING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Process creation foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-PROCESSES-PROCESS-CREATION-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Process termination foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S8-PROCESSES-PROCESS-TERMINATION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-THREADS",
+      "children": [
+        {
+          "name": "Thread basics",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-THREADS-THREAD-BASICS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "User-thread foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-THREADS-USER-THREAD-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Kernel-thread foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-THREADS-KERNEL-THREAD-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-INTER-PROCESS-COMMUNICATION",
+      "children": [
+        {
+          "name": "Shared memory",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-INTER-PROCESS-COMMUNICATION-SHARED-MEMORY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Message passing",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-INTER-PROCESS-COMMUNICATION-MESSAGE-PASSING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Pipes foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-INTER-PROCESS-COMMUNICATION-PIPES-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-CONCURRENCY",
+      "children": [
+        {
+          "name": "Race conditions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-CONCURRENCY-RACE-CONDITIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Critical section",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-CONCURRENCY-CRITICAL-SECTION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-SYNCHRONIZATION",
+      "children": [
+        {
+          "name": "Mutex",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-SYNCHRONIZATION-MUTEX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Semaphore",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-SYNCHRONIZATION-SEMAPHORE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Monitor foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-SYNCHRONIZATION-MONITOR-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Classical synchronization problems",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-SYNCHRONIZATION-CLASSICAL-SYNCHRONIZATION-PROBLEMS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-DEADLOCK",
+      "children": [
+        {
+          "name": "Deadlock necessary conditions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-NECESSARY-CONDITIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Resource-allocation graph",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-DEADLOCK-RESOURCE-ALLOCATION-GRAPH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Deadlock prevention",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-PREVENTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Deadlock avoidance",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-AVOIDANCE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Deadlock detection",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-DETECTION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-CPU-SCHEDULING",
+      "children": [
+        {
+          "name": "Scheduling metrics",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-SCHEDULING-METRICS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "FCFS",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-FCFS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "SJF",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-SJF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "SRTF",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-SRTF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Priority scheduling",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-PRIORITY-SCHEDULING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Round Robin",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S8-CPU-SCHEDULING-ROUND-ROBIN",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-IO-SCHEDULING",
+      "children": [
+        {
+          "name": "Disk-scheduling algorithms",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-IO-SCHEDULING-DISK-SCHEDULING-ALGORITHMS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-MEMORY-MANAGEMENT",
+      "children": [
+        {
+          "name": "Contiguous allocation",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-MEMORY-MANAGEMENT-CONTIGUOUS-ALLOCATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Paging",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-MEMORY-MANAGEMENT-PAGING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Segmentation",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-MEMORY-MANAGEMENT-SEGMENTATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-VIRTUAL-MEMORY",
+      "children": [
+        {
+          "name": "Demand paging",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-VIRTUAL-MEMORY-DEMAND-PAGING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Page faults",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-VIRTUAL-MEMORY-PAGE-FAULTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Page replacement",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-VIRTUAL-MEMORY-PAGE-REPLACEMENT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "TLB foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-VIRTUAL-MEMORY-TLB-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Thrashing foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S8-VIRTUAL-MEMORY-THRASHING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S8-FILE-SYSTEMS",
+      "children": [
+        {
+          "name": "File concepts",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S8-FILE-SYSTEMS-FILE-CONCEPTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Directory structures",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S8-FILE-SYSTEMS-DIRECTORY-STRUCTURES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "File allocation",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S8-FILE-SYSTEMS-FILE-ALLOCATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Free-space management",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S8-FILE-SYSTEMS-FREE-SPACE-MANAGEMENT",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-ER-MODEL",
+      "children": [
+        {
+          "name": "Entities and attributes",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-ER-MODEL-ENTITIES-AND-ATTRIBUTES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Relationships",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-ER-MODEL-RELATIONSHIPS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Cardinality",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-ER-MODEL-CARDINALITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Participation",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-ER-MODEL-PARTICIPATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Weak entities",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-ER-MODEL-WEAK-ENTITIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "ER-to-relational mapping foundations",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S9-ER-MODEL-ER-TO-RELATIONAL-MAPPING-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-RELATIONAL-MODEL",
+      "children": [
+        {
+          "name": "Relations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-RELATIONAL-MODEL-RELATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Schemas",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-RELATIONAL-MODEL-SCHEMAS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Keys",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-RELATIONAL-MODEL-KEYS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-RELATIONAL-ALGEBRA",
+      "children": [
+        {
+          "name": "Selection",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-SELECTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Projection",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-PROJECTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Union",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-UNION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Difference",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-DIFFERENCE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Cartesian product",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-CARTESIAN-PRODUCT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Joins",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-JOINS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Division foundations",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S9-RELATIONAL-ALGEBRA-DIVISION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-TUPLE-CALCULUS",
+      "children": [
+        {
+          "name": "Tuple-relational-calculus expressions",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-TUPLE-CALCULUS-TUPLE-RELATIONAL-CALCULUS-EXPRESSIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-SQL",
+      "children": [
+        {
+          "name": "Basic SQL queries",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-SQL-BASIC-SQL-QUERIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "SQL joins",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-SQL-SQL-JOINS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Nested queries",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-SQL-NESTED-QUERIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Aggregation",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-SQL-AGGREGATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "GROUP BY",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-SQL-GROUP-BY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "HAVING",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S9-SQL-HAVING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-INTEGRITY-CONSTRAINTS",
+      "children": [
+        {
+          "name": "Domain constraints",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-INTEGRITY-CONSTRAINTS-DOMAIN-CONSTRAINTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Key constraints",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-INTEGRITY-CONSTRAINTS-KEY-CONSTRAINTS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Entity integrity",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-INTEGRITY-CONSTRAINTS-ENTITY-INTEGRITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Referential integrity",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-INTEGRITY-CONSTRAINTS-REFERENTIAL-INTEGRITY",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-NORMAL-FORMS",
+      "children": [
+        {
+          "name": "Functional dependencies",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-FUNCTIONAL-DEPENDENCIES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Attribute closure",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-ATTRIBUTE-CLOSURE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Candidate keys",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-CANDIDATE-KEYS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "1NF",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-1NF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "2NF",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-2NF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "3NF",
+          "displayOrder": 6,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-3NF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "BCNF",
+          "displayOrder": 7,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-BCNF",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Decomposition",
+          "displayOrder": 8,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-DECOMPOSITION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Lossless join",
+          "displayOrder": 9,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-LOSSLESS-JOIN",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Dependency preservation",
+          "displayOrder": 10,
+          "code": "PREP-G27-CS-S9-NORMAL-FORMS-DEPENDENCY-PRESERVATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-FILE-ORGANIZATION",
+      "children": [
+        {
+          "name": "File-organization foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-FILE-ORGANIZATION-FILE-ORGANIZATION-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-INDEXING",
+      "children": [
+        {
+          "name": "Primary index",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-INDEXING-PRIMARY-INDEX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Secondary index",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-INDEXING-SECONDARY-INDEX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Dense index",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-INDEXING-DENSE-INDEX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Sparse index",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-INDEXING-SPARSE-INDEX",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multilevel indexes",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-INDEXING-MULTILEVEL-INDEXES",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-B-TREES",
+      "children": [
+        {
+          "name": "B-tree search",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-B-TREES-B-TREE-SEARCH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "B-tree insertion",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-B-TREES-B-TREE-INSERTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "B-tree deletion",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-B-TREES-B-TREE-DELETION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-B-PLUS-TREES",
+      "children": [
+        {
+          "name": "B+ tree search",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-B-PLUS-TREES-B-TREE-SEARCH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "B+ tree insertion",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-B-PLUS-TREES-B-TREE-INSERTION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "B+ tree deletion",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-B-PLUS-TREES-B-TREE-DELETION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-TRANSACTIONS",
+      "children": [
+        {
+          "name": "ACID",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-TRANSACTIONS-ACID",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Schedules",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-TRANSACTIONS-SCHEDULES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Transaction-state foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-TRANSACTIONS-TRANSACTION-STATE-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S9-CONCURRENCY-CONTROL",
+      "children": [
+        {
+          "name": "Serializability",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-SERIALIZABILITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Conflict serializability",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-CONFLICT-SERIALIZABILITY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Locking",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-LOCKING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Two-phase locking",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-TWO-PHASE-LOCKING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Timestamp-based foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-TIMESTAMP-BASED-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-PRINCIPLES-LAYERING",
+      "children": [
+        {
+          "name": "Network layers",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-NETWORK-LAYERS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Services protocols and interfaces",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-SERVICES-PROTOCOLS-AND-INTERFACES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Encapsulation",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-ENCAPSULATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "TCP/IP foundations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-TCP-IP-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "OSI foundations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-OSI-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-CIRCUIT-SWITCHING",
+      "children": [
+        {
+          "name": "Circuit-switching fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-CIRCUIT-SWITCHING-CIRCUIT-SWITCHING-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-PACKET-SWITCHING",
+      "children": [
+        {
+          "name": "Packet-switching fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-PACKET-SWITCHING-PACKET-SWITCHING-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-VIRTUAL-CIRCUIT-SWITCHING",
+      "children": [
+        {
+          "name": "Virtual-circuit fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-VIRTUAL-CIRCUIT-SWITCHING-VIRTUAL-CIRCUIT-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-PERFORMANCE-METRICS",
+      "children": [
+        {
+          "name": "Delay",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-PERFORMANCE-METRICS-DELAY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Throughput",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-PERFORMANCE-METRICS-THROUGHPUT",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Bandwidth",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-PERFORMANCE-METRICS-BANDWIDTH",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Transmission-delay calculations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S10-PERFORMANCE-METRICS-TRANSMISSION-DELAY-CALCULATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Propagation-delay calculations",
+          "displayOrder": 5,
+          "code": "PREP-G27-CS-S10-PERFORMANCE-METRICS-PROPAGATION-DELAY-CALCULATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-ERROR-DETECTION",
+      "children": [
+        {
+          "name": "Parity foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-ERROR-DETECTION-PARITY-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Checksum foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-ERROR-DETECTION-CHECKSUM-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CRC",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-ERROR-DETECTION-CRC",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-MEDIUM-ACCESS-CONTROL",
+      "children": [
+        {
+          "name": "Random-access foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-MEDIUM-ACCESS-CONTROL-RANDOM-ACCESS-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "ALOHA foundations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-MEDIUM-ACCESS-CONTROL-ALOHA-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CSMA foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-MEDIUM-ACCESS-CONTROL-CSMA-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-ETHERNET",
+      "children": [
+        {
+          "name": "Ethernet fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-ETHERNET-ETHERNET-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-DISTANCE-VECTOR-ROUTING",
+      "children": [
+        {
+          "name": "Distance-vector fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-DISTANCE-VECTOR-ROUTING-DISTANCE-VECTOR-FUNDAMENTALS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Bellman-Ford routing principle",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-DISTANCE-VECTOR-ROUTING-BELLMAN-FORD-ROUTING-PRINCIPLE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-LINK-STATE-ROUTING",
+      "children": [
+        {
+          "name": "Link-state fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-LINK-STATE-ROUTING-LINK-STATE-FUNDAMENTALS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Dijkstra routing principle",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-LINK-STATE-ROUTING-DIJKSTRA-ROUTING-PRINCIPLE",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-IPV4-FRAGMENTATION",
+      "children": [
+        {
+          "name": "MTU",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-IPV4-FRAGMENTATION-MTU",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Fragment fields",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-IPV4-FRAGMENTATION-FRAGMENT-FIELDS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "IPv4 fragmentation calculations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-IPV4-FRAGMENTATION-IPV4-FRAGMENTATION-CALCULATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-CIDR-NOTATION",
+      "children": [
+        {
+          "name": "IPv4 addressing foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-CIDR-NOTATION-IPV4-ADDRESSING-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "CIDR prefixes",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-CIDR-NOTATION-CIDR-PREFIXES",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Subnetting",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-CIDR-NOTATION-SUBNETTING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Address-block calculations",
+          "displayOrder": 4,
+          "code": "PREP-G27-CS-S10-CIDR-NOTATION-ADDRESS-BLOCK-CALCULATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-NETWORK-ADDRESS-TRANSLATION",
+      "children": [
+        {
+          "name": "NAT fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-NETWORK-ADDRESS-TRANSLATION-NAT-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-TCP-FLOW-CONTROL",
+      "children": [
+        {
+          "name": "Sliding-window foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-TCP-FLOW-CONTROL-SLIDING-WINDOW-FOUNDATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Receiver-window calculations",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-TCP-FLOW-CONTROL-RECEIVER-WINDOW-CALCULATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-TCP-CONGESTION-CONTROL",
+      "children": [
+        {
+          "name": "Congestion window",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-TCP-CONGESTION-CONTROL-CONGESTION-WINDOW",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Slow start",
+          "displayOrder": 2,
+          "code": "PREP-G27-CS-S10-TCP-CONGESTION-CONTROL-SLOW-START",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Congestion-avoidance foundations",
+          "displayOrder": 3,
+          "code": "PREP-G27-CS-S10-TCP-CONGESTION-CONTROL-CONGESTION-AVOIDANCE-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-SOCKET-API",
+      "children": [
+        {
+          "name": "Socket-API fundamentals",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-SOCKET-API-SOCKET-API-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-DNS",
+      "children": [
+        {
+          "name": "DNS resolution",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-DNS-DNS-RESOLUTION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "CS-S10-HTTP",
+      "children": [
+        {
+          "name": "HTTP request-response foundations",
+          "displayOrder": 1,
+          "code": "PREP-G27-CS-S10-HTTP-HTTP-REQUEST-RESPONSE-FOUNDATIONS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S1-READING-COMPREHENSION",
+      "children": [
+        {
+          "name": "Main idea",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S1-READING-COMPREHENSION-MAIN-IDEA",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inference",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S1-READING-COMPREHENSION-INFERENCE",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Contextual meaning",
+          "displayOrder": 3,
+          "code": "PREP-G27-GA-S1-READING-COMPREHENSION-CONTEXTUAL-MEANING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Passage-based reasoning",
+          "displayOrder": 4,
+          "code": "PREP-G27-GA-S1-READING-COMPREHENSION-PASSAGE-BASED-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S1-NARRATIVE-SEQUENCING",
+      "children": [
+        {
+          "name": "Sentence ordering",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S1-NARRATIVE-SEQUENCING-SENTENCE-ORDERING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Narrative-flow reasoning",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S1-NARRATIVE-SEQUENCING-NARRATIVE-FLOW-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S2-DATA-INTERPRETATION",
+      "children": [
+        {
+          "name": "Data-comparison strategy",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S2-DATA-INTERPRETATION-DATA-COMPARISON-STRATEGY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Multi-source data interpretation",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S2-DATA-INTERPRETATION-MULTI-SOURCE-DATA-INTERPRETATION",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S2-NUMERICAL-COMPUTATION-ESTIMATION",
+      "children": [
+        {
+          "name": "Approximation",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S2-NUMERICAL-COMPUTATION-ESTIMATION-APPROXIMATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Estimation",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S2-NUMERICAL-COMPUTATION-ESTIMATION-ESTIMATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Arithmetic speed",
+          "displayOrder": 3,
+          "code": "PREP-G27-GA-S2-NUMERICAL-COMPUTATION-ESTIMATION-ARITHMETIC-SPEED",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S2-MENSURATION-GEOMETRY",
+      "children": [
+        {
+          "name": "2D mensuration",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S2-MENSURATION-GEOMETRY-2D-MENSURATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "3D mensuration",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S2-MENSURATION-GEOMETRY-3D-MENSURATION",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Geometry fundamentals",
+          "displayOrder": 3,
+          "code": "PREP-G27-GA-S2-MENSURATION-GEOMETRY-GEOMETRY-FUNDAMENTALS",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S2-ELEMENTARY-STATISTICS-PROBABILITY",
+      "children": [
+        {
+          "name": "Elementary statistics",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S2-ELEMENTARY-STATISTICS-PROBABILITY-ELEMENTARY-STATISTICS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Elementary probability",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S2-ELEMENTARY-STATISTICS-PROBABILITY-ELEMENTARY-PROBABILITY",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S3-LOGIC-DEDUCTION-INDUCTION",
+      "children": [
+        {
+          "name": "Deductive reasoning",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S3-LOGIC-DEDUCTION-INDUCTION-DEDUCTIVE-REASONING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Inductive reasoning",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S3-LOGIC-DEDUCTION-INDUCTION-INDUCTIVE-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S3-NUMERICAL-RELATIONS-REASONING",
+      "children": [
+        {
+          "name": "Numerical relations",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S3-NUMERICAL-RELATIONS-REASONING-NUMERICAL-RELATIONS",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Numerical reasoning",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S3-NUMERICAL-RELATIONS-REASONING-NUMERICAL-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S4-TRANSFORMATION-SHAPES",
+      "children": [
+        {
+          "name": "Shape-transformation reasoning",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S4-TRANSFORMATION-SHAPES-SHAPE-TRANSFORMATION-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S4-ASSEMBLING-GROUPING",
+      "children": [
+        {
+          "name": "Object assembly",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S4-ASSEMBLING-GROUPING-OBJECT-ASSEMBLY",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "Object grouping",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S4-ASSEMBLING-GROUPING-OBJECT-GROUPING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S4-PAPER-FOLDING",
+      "children": [
+        {
+          "name": "Paper-folding reasoning",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S4-PAPER-FOLDING-PAPER-FOLDING-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S4-PAPER-CUTTING",
+      "children": [
+        {
+          "name": "Paper-cutting reasoning",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S4-PAPER-CUTTING-PAPER-CUTTING-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    },
+    {
+      "parentCode": "GA-S4-2D-3D-PATTERNS",
+      "children": [
+        {
+          "name": "2D pattern reasoning",
+          "displayOrder": 1,
+          "code": "PREP-G27-GA-S4-2D-3D-PATTERNS-2D-PATTERN-REASONING",
+          "existingOfficialCode": null
+        },
+        {
+          "name": "3D pattern reasoning",
+          "displayOrder": 2,
+          "code": "PREP-G27-GA-S4-2D-3D-PATTERNS-3D-PATTERN-REASONING",
+          "existingOfficialCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -2,9 +2,9 @@ import { app } from '../app.js';
 
 const expectedCsCodes = new Set(['CS-S1-ENGINEERING-MATHEMATICS', 'CS-S2-DIGITAL-LOGIC', 'CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE', 'CS-S4-PROGRAMMING-DATA-STRUCTURES', 'CS-S5-ALGORITHMS', 'CS-S6-THEORY-COMPUTATION', 'CS-S7-COMPILER-DESIGN', 'CS-S8-OPERATING-SYSTEM', 'CS-S9-DATABASES', 'CS-S10-COMPUTER-NETWORKS']);
 
-type Settings = { examName: string; examDate: string | null; targetMarks: number; weekdayStudyHours: number; sundayStudyHours: number; mondayStudyHours: number; updatedAt: string };
-type Topic = { id: string; code: string; name: string; status: string; children: Topic[] };
-type Syllabus = { version: string; subjectCount: number; topicCount: number; subjects: Array<{ code: string; paperCode: string; topics: Topic[] }> };
+type Settings = { examName: string; examDate: string | null; targetMarks: number; weekdayStudyHours: number; saturdayStudyHours: number; sundayStudyHours: number; mondayStudyHours: number; updatedAt: string };
+type Topic = { id: string; code: string; name: string; status: string; isOfficial: boolean; leafCount: number; masteredLeafCount: number; weakLeafCount: number; children: Topic[] };
+type Syllabus = { version: string; subjectCount: number; topicCount: number; officialTopicCount: number; studySubtopicCount: number; totalNodeCount: number; actionableLeafCount: number; subjects: Array<{ code: string; paperCode: string; topics: Topic[] }> };
 
 function assert(condition: unknown, message: string): asserts condition { if (!condition) throw new Error(message); }
 
@@ -27,22 +27,27 @@ async function main(): Promise<void> {
     assert(settingsResult.response.status === 200, 'GET /api/settings failed.');
     originalSettings = (settingsResult.payload as { data: Settings }).data;
     const temporaryTargetMarks = originalSettings.targetMarks === 71 ? 70 : 71;
+    const temporarySaturdayHours = originalSettings.saturdayStudyHours === 8 ? 7 : 8;
     mutationStarted = true;
-    const settingsPatch = await request('/api/settings', { method: 'PATCH', body: JSON.stringify({ targetMarks: temporaryTargetMarks }) });
-    assert(settingsPatch.response.status === 200 && (settingsPatch.payload as { data: Settings }).data.targetMarks === temporaryTargetMarks, 'PATCH /api/settings did not persist the temporary value.');
+    const settingsPatch = await request('/api/settings', { method: 'PATCH', body: JSON.stringify({ targetMarks: temporaryTargetMarks, saturdayStudyHours: temporarySaturdayHours }) });
+    assert(settingsPatch.response.status === 200 && (settingsPatch.payload as { data: Settings }).data.targetMarks === temporaryTargetMarks && (settingsPatch.payload as { data: Settings }).data.saturdayStudyHours === temporarySaturdayHours, 'PATCH /api/settings did not persist the temporary values.');
     const settingsRead = await request('/api/settings');
-    assert((settingsRead.payload as { data: Settings }).data.targetMarks === temporaryTargetMarks, 'GET /api/settings did not return the temporary value.');
+    assert((settingsRead.payload as { data: Settings }).data.targetMarks === temporaryTargetMarks && (settingsRead.payload as { data: Settings }).data.saturdayStudyHours === temporarySaturdayHours, 'GET /api/settings did not return the temporary values.');
 
     const syllabusResult = await request('/api/syllabus');
     assert(syllabusResult.response.status === 200, 'GET /api/syllabus failed.');
     const syllabus = (syllabusResult.payload as { data: Syllabus }).data;
-    assert(syllabus.version === 'GATE_2027' && syllabus.subjectCount === 11 && syllabus.topicCount === 173, 'Syllabus counts or version are incorrect.');
+    assert(syllabus.version === 'GATE_2027' && syllabus.subjectCount === 11 && syllabus.topicCount === 173 && syllabus.officialTopicCount === 173 && [0, 493].includes(syllabus.studySubtopicCount) && syllabus.totalNodeCount === 173 + syllabus.studySubtopicCount && syllabus.actionableLeafCount > 0, 'Syllabus counts or version are incorrect.');
     assert(syllabus.subjects.some((subject) => subject.code === 'GA' && subject.paperCode === 'GA'), 'GA is missing.');
     const csCodes = new Set(syllabus.subjects.filter((subject) => subject.paperCode === 'CS').map((subject) => subject.code));
     assert(csCodes.size === 10 && [...expectedCsCodes].every((code) => csCodes.has(code)), 'CS sections are incomplete.');
     const findTopic = (topics: Topic[]): Topic | undefined => { for (const topic of topics) { if (topic.children.length === 0) return topic; const child = findTopic(topic.children); if (child) return child; } return undefined; };
     const selectedTopic = syllabus.subjects.map((subject) => findTopic(subject.topics)).find((topic): topic is Topic => Boolean(topic));
-    assert(selectedTopic, 'No official topic is available for status verification.');
+    assert(selectedTopic, 'No actionable leaf is available for status verification.');
+    const parentTopic = syllabus.subjects.flatMap((subject) => subject.topics).find((topic) => topic.children.length > 0);
+    assert(parentTopic, 'No parent topic is available for derived-status verification.');
+    const parentPatch = await request(`/api/topics/${parentTopic.id}/status`, { method: 'PATCH', body: JSON.stringify({ status: 'LEARNING' }) });
+    assert(parentPatch.response.status === 409, 'A derived parent topic accepted a direct status mutation.');
     originalTopic = { id: selectedTopic.id, status: selectedTopic.status };
     const temporaryStatus = originalTopic.status === 'LEARNING' ? 'NOT_STARTED' : 'LEARNING';
     const topicPatch = await request(`/api/topics/${originalTopic.id}/status`, { method: 'PATCH', body: JSON.stringify({ status: temporaryStatus }) });
@@ -53,18 +58,19 @@ async function main(): Promise<void> {
       request('/api/settings', { method: 'PATCH', body: JSON.stringify({}) }),
       request('/api/settings', { method: 'PATCH', body: JSON.stringify({ targetMarks: 101 }) }),
       request('/api/settings', { method: 'PATCH', body: JSON.stringify({ weekdayStudyHours: -1 }) }),
+      request('/api/settings', { method: 'PATCH', body: JSON.stringify({ saturdayStudyHours: 25 }) }),
       request('/api/topics/not-a-uuid/status', { method: 'PATCH', body: JSON.stringify({ status: 'LEARNING' }) }),
       request('/api/topics/00000000-0000-0000-0000-000000000000/status', { method: 'PATCH', body: JSON.stringify({ status: 'LEARNING' }) }),
       request(`/api/topics/${originalTopic.id}/status`, { method: 'PATCH', body: JSON.stringify({ status: 'INVALID' }) }),
       request(`/api/topics/${originalTopic.id}/status`, { method: 'PATCH', body: JSON.stringify({ status: 'LEARNING', extra: true }) })
     ]);
-    const expectedStatuses = [400, 400, 400, 400, 400, 404, 400, 400];
+    const expectedStatuses = [400, 400, 400, 400, 400, 400, 404, 400, 400];
     invalidChecks.forEach((result, index) => { assert(result.response.status === expectedStatuses[index], `Invalid-request check ${index + 1} returned ${result.response.status}.`); assert(typeof result.payload === 'object' && result.payload !== null && 'error' in result.payload, `Invalid-request check ${index + 1} did not use the error envelope.`); });
   } finally {
     let restoreError: Error | undefined;
     try {
       if (originalSettings && mutationStarted) {
-        const restore = await request('/api/settings', { method: 'PATCH', body: JSON.stringify({ targetMarks: originalSettings.targetMarks }) });
+        const restore = await request('/api/settings', { method: 'PATCH', body: JSON.stringify({ targetMarks: originalSettings.targetMarks, saturdayStudyHours: originalSettings.saturdayStudyHours }) });
         if (restore.response.status !== 200) throw new Error('Settings restoration failed.');
       }
       if (originalTopic) {
@@ -73,7 +79,8 @@ async function main(): Promise<void> {
       }
       if (originalSettings) {
         const finalSettings = await request('/api/settings');
-        if ((finalSettings.payload as { data: Settings }).data.targetMarks !== originalSettings.targetMarks) throw new Error('Final settings state was not restored.');
+        const finalData = (finalSettings.payload as { data: Settings }).data;
+        if (finalData.targetMarks !== originalSettings.targetMarks || finalData.saturdayStudyHours !== originalSettings.saturdayStudyHours) throw new Error('Final settings state was not restored.');
       }
       if (originalTopic) {
         const finalSyllabus = (await request('/api/syllabus')).payload as { data: Syllabus };
@@ -85,7 +92,7 @@ async function main(): Promise<void> {
     await new Promise<void>((resolve, reject) => server.close((error) => error ? reject(error) : resolve()));
     if (restoreError) throw restoreError;
   }
-  console.log(JSON.stringify({ status: 'PASS', settingsRestored: true, topicStatusRestored: true, invalidRequests: 8 }, null, 2));
+  console.log(JSON.stringify({ status: 'PASS', settingsRestored: true, topicStatusRestored: true, parentStatusDerived: true, invalidRequests: 9 }, null, 2));
 }
 
 main().catch((error: unknown) => { console.error(`API verification failed: ${error instanceof Error ? error.message : 'Unknown error.'}`); process.exitCode = 1; });

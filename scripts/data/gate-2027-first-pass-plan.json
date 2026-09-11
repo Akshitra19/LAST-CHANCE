@@ -1,0 +1,3260 @@
+{
+  "planKey": "GATE2027_FIRST_PASS_20260911_20261231_V1",
+  "startDate": "2026-09-11",
+  "endDate": "2026-12-31",
+  "weekdayHolidayOverrides": [
+    "2026-10-02",
+    "2026-10-20",
+    "2026-12-25"
+  ],
+  "days": [
+    {
+      "date": "2026-09-11",
+      "lanes": {
+        "cs": {
+          "description": "C program structure, tokens, variables/constants, data types, basic I/O",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-C-PROGRAM-STRUCTURE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Propositions and logical connectives",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-PROPOSITIONS-AND-CONNECTIVES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "GA overview + Basic English grammar",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-BASIC-ENGLISH-GRAMMAR",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "lanes": {
+        "cs": {
+          "description": "Type conversion/casting, operators, precedence, associativity, expressions",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-TYPE-CONVERSION-AND-CASTING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Truth tables",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-TRUTH-TABLES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Tenses",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-TENSES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "lanes": {
+        "cs": {
+          "description": "if/else, switch, loops, break/continue, tracing",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-CONDITIONAL-STATEMENTS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Implication and equivalence",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-IMPLICATION-AND-EQUIVALENCE",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Articles",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-ARTICLES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "lanes": {
+        "cs": {
+          "description": "Functions, prototypes, parameter passing, return values",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-FUNCTIONS-AND-PROTOTYPES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Logical identities and normal-form foundations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-LOGICAL-IDENTITIES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Adjectives",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-ADJECTIVES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "lanes": {
+        "cs": {
+          "description": "Scope, lifetime, storage classes and array introduction",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-SCOPE-AND-LIFETIME",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Predicates and quantifiers",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-PREDICATES-AND-QUANTIFIERS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Prepositions",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-PREPOSITIONS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "lanes": {
+        "cs": {
+          "description": "Arrays, multidimensional arrays and address calculation",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-ARRAYS-ARRAY-REPRESENTATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Logical inference",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-LOGIC-LOGICAL-INFERENCE",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Conjunctions",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-CONJUNCTIONS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "lanes": {
+        "cs": {
+          "description": "Character arrays and strings",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-CHARACTER-ARRAYS-AND-STRINGS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Logic PYQs and revision",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-LOGIC",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verb-noun agreement",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERB-NOUN-AGREEMENT",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "lanes": {
+        "cs": {
+          "description": "Pointer fundamentals, addresses, dereferencing, pointer types, NULL",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-FUNDAMENTALS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Sets, operations and Cartesian products",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-SET-OPERATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Other parts of speech",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-OTHER-PARTS-SPEECH",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "lanes": {
+        "cs": {
+          "description": "Pointer arithmetic and arrays/pointers relationship",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-ARITHMETIC",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Relations and properties",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-RELATION-PROPERTIES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Basic vocabulary",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-BASIC-VOCABULARY",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "lanes": {
+        "cs": {
+          "description": "Pointer-to-pointer, function pointers foundations, structures, unions, enums, typedef, dynamic-memory foundations",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-PROGRAMMING-C-POINTER-TO-POINTER",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Equivalence relations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-EQUIVALENCE-RELATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Words in context",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-WORDS-CONTEXT",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "lanes": {
+        "cs": {
+          "description": "Recursion — base case, stack, return tracing, multiple recursive calls",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-RECURSION-BASE-CONDITION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Functions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-FUNCTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Idioms in context",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-IDIOMS-CONTEXT",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "lanes": {
+        "cs": {
+          "description": "Arrays as DS — representation, operations, 1D/2D address problems",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-ARRAYS-ARRAY-REPRESENTATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Composition/inverse, one-one and onto",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-SETS-RELATIONS-FUNCTIONS-FUNCTION-COMPOSITION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Phrases in context",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-PHRASES-CONTEXT",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "lanes": {
+        "cs": {
+          "description": "Stacks — operations, array/linked implementation, applications",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-STACKS-STACK-OPERATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Sets/relations/functions PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-SETS-RELATIONS-FUNCTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Reading comprehension",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-READING-COMPREHENSION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "lanes": {
+        "cs": {
+          "description": "Queues — linear/circular queue, deque foundations, implementation",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-QUEUES-LINEAR-QUEUE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Partial orders / posets",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-POSETS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Narrative sequencing",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-NARRATIVE-SEQUENCING",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "lanes": {
+        "cs": {
+          "description": "Linked Lists I — singly linked list, insertion/deletion/traversal",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-LINKED-LISTS-SINGLY-LINKED-LIST",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Hasse diagrams",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-HASSE-DIAGRAMS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Data Interpretation overview",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "lanes": {
+        "cs": {
+          "description": "Linked Lists II — doubly and circular lists, problems",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-LINKED-LISTS-DOUBLY-LINKED-LIST",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Lattices",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-PARTIAL-ORDERS-LATTICES-LATTICES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Bar graphs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-BAR-GRAPHS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "lanes": {
+        "cs": {
+          "description": "Trees I — terminology, representation, binary trees, traversals",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-TREES-TREE-TERMINOLOGY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Posets/lattices PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-PARTIAL-ORDERS-LATTICES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Pie charts",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-PIE-CHARTS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "lanes": {
+        "cs": {
+          "description": "Trees II — preorder/inorder/postorder and reconstruction",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-TREES-PREORDER-TRAVERSAL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Binary operations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-BINARY-OPERATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Other data graphs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-OTHER-DATA-GRAPHS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "lanes": {
+        "cs": {
+          "description": "BST — search, insertion, deletion, complexity",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-BINARY-SEARCH-TREES-BST-SEARCH",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Monoids",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-MONOIDS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "2D plots",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-2D-PLOTS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "lanes": {
+        "cs": {
+          "description": "Binary heaps — min/max heap, heapify, insert, extract/delete",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-BINARY-HEAPS-MIN-HEAP",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Groups",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-MONOIDS-GROUPS-GROUPS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "3D plots",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-3D-PLOTS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "lanes": {
+        "cs": {
+          "description": "Graphs as DS — terminology, adjacency matrix/list, representation",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": "PREP-G27-CS-S4-GRAPHS-GRAPH-TERMINOLOGY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Monoids/groups PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-MONOIDS-GROUPS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Maps",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-MAPS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "lanes": {
+        "cs": {
+          "description": "Programming/Data Structures mixed PYQs and weak-area test",
+          "subjectCode": "CS-S4-PROGRAMMING-DATA-STRUCTURES",
+          "topicCode": null,
+          "taskType": "TEST",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Graph fundamentals",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-GRAPH-FUNDAMENTALS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Tables",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-TABLES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "lanes": {
+        "cs": {
+          "description": "Big-O, Big-Omega, Big-Theta and worst-case time",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-BIG-O",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Paths and connectivity",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-PATHS-AND-CONNECTIVITY",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Numerical computation and estimation",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-NUMERICAL-COMPUTATION-ESTIMATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "lanes": {
+        "cs": {
+          "description": "Loop/recurrence analysis and worst-case space",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-ASYMPTOTIC-WORST-CASE-TIME-LOOP-COMPLEXITY-ANALYSIS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Connected components",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-CONNECTED-COMPONENTS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Ratios",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-RATIOS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "lanes": {
+        "cs": {
+          "description": "Searching — linear and binary",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-SEARCHING-LINEAR-SEARCH",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Matching",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-MATCHING",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Percentages",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-PERCENTAGES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "lanes": {
+        "cs": {
+          "description": "Sorting I — bubble, selection, insertion, stability/in-place",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-SORTING-BUBBLE-SORT",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Graph colouring",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING-GRAPH-COLOURING",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Powers",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-POWERS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "lanes": {
+        "cs": {
+          "description": "Sorting II — merge, quick, heap sort",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-SORTING-MERGE-SORT",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Graph theory PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-GRAPH-CONNECTIVITY-MATCHING-COLOURING",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Exponents and logarithms",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-EXPONENTS-LOGARITHMS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "lanes": {
+        "cs": {
+          "description": "Hashing — functions, collisions, chaining, open addressing, load factor",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-HASHING-HASH-FUNCTIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Counting principles",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-BASIC-COUNTING-PRINCIPLES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Permutations and combinations",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-PERMUTATIONS-COMBINATIONS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "lanes": {
+        "cs": {
+          "description": "Divide-and-conquer and recurrence analysis",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-DIVIDE-CONQUER-DIVIDE-CONQUER-COMBINE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Permutations and combinations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-PERMUTATIONS-AND-COMBINATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Series",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-SERIES",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "lanes": {
+        "cs": {
+          "description": "Greedy algorithms",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "CS-S5-GREEDY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Inclusion-exclusion and counting techniques",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-INCLUSION-EXCLUSION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Mensuration",
+          "subjectCode": "GA",
+          "topicCode": "PREP-G27-GA-S2-MENSURATION-GEOMETRY-2D-MENSURATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "lanes": {
+        "cs": {
+          "description": "DP I — optimal substructure, overlapping subproblems, memoization",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-OPTIMAL-SUBSTRUCTURE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Recurrence formulation",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-RECURRENCE-FORMULATION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Geometry",
+          "subjectCode": "GA",
+          "topicCode": "PREP-G27-GA-S2-MENSURATION-GEOMETRY-GEOMETRY-FUNDAMENTALS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "lanes": {
+        "cs": {
+          "description": "DP II — tabulation and state/transition design",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-DYNAMIC-PROGRAMMING-DP-STATE-AND-TRANSITION-DESIGN",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Solving recurrences",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-SOLVING-RECURRENCE-RELATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Elementary statistics",
+          "subjectCode": "GA",
+          "topicCode": "PREP-G27-GA-S2-ELEMENTARY-STATISTICS-PROBABILITY-ELEMENTARY-STATISTICS",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "lanes": {
+        "cs": {
+          "description": "Graph traversals — BFS and DFS",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "PREP-G27-CS-S5-GRAPH-TRAVERSALS-BFS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Generating functions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS-GENERATING-FUNCTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Elementary probability",
+          "subjectCode": "GA",
+          "topicCode": "PREP-G27-GA-S2-ELEMENTARY-STATISTICS-PROBABILITY-ELEMENTARY-PROBABILITY",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "lanes": {
+        "cs": {
+          "description": "MST and shortest paths — Prim, Kruskal, Dijkstra, Bellman-Ford foundations",
+          "subjectCode": "CS-S5-ALGORITHMS",
+          "topicCode": "CS-S5-MINIMUM-SPANNING-TREES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Combinatorics PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DM-COUNTING-RECURRENCES-GENERATING-FUNCTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Logic — deduction",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-LOGIC-DEDUCTION-INDUCTION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "lanes": {
+        "cs": {
+          "description": "Boolean laws, expressions, SOP/POS, minterms/maxterms",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-BOOLEAN-ALGEBRA-MINIMIZATION-BOOLEAN-LAWS-AND-IDENTITIES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Discrete Math full revision/test",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DISCRETE-MATHEMATICS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Logic — induction",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-LOGIC-DEDUCTION-INDUCTION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "lanes": {
+        "cs": {
+          "description": "Algebraic minimization and 2/3-variable K-map",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-ALGEBRAIC-TECHNIQUE-ALGEBRAIC-MINIMIZATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Matrices — types and operations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-MATRICES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analogy",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALOGY",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "lanes": {
+        "cs": {
+          "description": "4-variable K-map, don't-cares, tabular/Quine-McCluskey foundations",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-KARNAUGH-MAP-4-VARIABLE-K-MAP",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Transpose and matrix properties",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-MATRICES-TRANSPOSE",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Numerical relations/reasoning",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-NUMERICAL-RELATIONS-REASONING",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "lanes": {
+        "cs": {
+          "description": "Combinational circuits I — adders, subtractors, comparators",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-ADDERS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Matrix inverse",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-MATRICES-INVERSE",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial overview",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "lanes": {
+        "cs": {
+          "description": "Combinational circuits II — mux/demux, encoders/decoders",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-COMBINATIONAL-CIRCUITS-MULTIPLEXERS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Elementary row operations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-MATRICES-ELEMENTARY-ROW-OPERATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Translation and rotation",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-TRANSLATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "lanes": {
+        "cs": {
+          "description": "Sequential circuits I — latches and flip-flops",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-LATCHES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Rank",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-MATRICES-RANK",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Scaling and mirroring",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SCALING",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "lanes": {
+        "cs": {
+          "description": "Sequential circuits II — registers, counters, state analysis",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "PREP-G27-CS-S2-SEQUENTIAL-CIRCUITS-REGISTERS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Matrix PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-MATRICES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Assembling/grouping and paper folding",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-ASSEMBLING-GROUPING",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "lanes": {
+        "cs": {
+          "description": "Fixed/floating-point representation, complements, overflow, normalization",
+          "subjectCode": "CS-S2-DIGITAL-LOGIC",
+          "topicCode": "CS-S2-FIXED-POINT-REPRESENTATION-ARITHMETIC",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Determinant evaluation",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-DETERMINANTS-DETERMINANT-EVALUATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Paper cutting and 2D/3D patterns",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-PAPER-CUTTING",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "lanes": {
+        "cs": {
+          "description": "Instruction set, instruction formats, execution",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-INSTRUCTION-SET-INSTRUCTION-FORMATS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Determinant properties",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-DETERMINANTS-DETERMINANT-PROPERTIES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA timed set",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "lanes": {
+        "cs": {
+          "description": "Addressing modes",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-ADDRESSING-MODES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Determinant PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-DETERMINANTS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant speed practice",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "lanes": {
+        "cs": {
+          "description": "ALU design",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-ALU",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Linear equations — setup",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-LINEAR-EQUATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal practice",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "lanes": {
+        "cs": {
+          "description": "Hardwired control",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-HARDWIRED-CONTROL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Gaussian elimination",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-GAUSSIAN-ELIMINATION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA mini-test and error log",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "lanes": {
+        "cs": {
+          "description": "Microprogrammed control, microinstructions, control memory",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-MICROPROGRAMMED-CONTROL-MICROINSTRUCTIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Consistency of systems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-CONSISTENCY-OF-LINEAR-SYSTEMS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "lanes": {
+        "cs": {
+          "description": "Memory interfacing",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-MEMORY-INTERFACING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Number/nature of solutions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-LINEAR-EQUATIONS-NUMBER-AND-NATURE-OF-SOLUTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "lanes": {
+        "cs": {
+          "description": "Memory hierarchy, locality, performance, AMAT",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-MEMORY-HIERARCHY-PERFORMANCE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Linear-equation PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-LINEAR-EQUATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "lanes": {
+        "cs": {
+          "description": "Cache I — direct and fully associative",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-DIRECT-MAPPING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Characteristic equation",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-CHARACTERISTIC-EQUATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed timed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "lanes": {
+        "cs": {
+          "description": "Cache II — set associative, replacement, write policies",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-CACHE-MEMORY-MAPPING-SET-ASSOCIATIVE-MAPPING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Eigenvalues",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVALUES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant speed",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "lanes": {
+        "cs": {
+          "description": "I/O, interrupts and DMA",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "CS-S3-IO-INTERFACE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Eigenvectors",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVECTORS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "lanes": {
+        "cs": {
+          "description": "Instruction pipelining — stages, throughput, speedup",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-INSTRUCTION-PIPELINING-PIPELINE-STAGES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Eigenvalue/eigenvector properties",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-EIGENVALUES-EIGENVECTORS-EIGENVALUE-EIGENVECTOR-PROPERTIES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "lanes": {
+        "cs": {
+          "description": "Pipeline hazards — structural/data/control, stalls, forwarding + COA PYQs",
+          "subjectCode": "CS-S3-COMPUTER-ORGANIZATION-ARCHITECTURE",
+          "topicCode": "PREP-G27-CS-S3-PIPELINE-HAZARDS-STRUCTURAL-HAZARDS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Eigen PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LA-EIGENVALUES-EIGENVECTORS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "lanes": {
+        "cs": {
+          "description": "System calls, process model, states, PCB, context switching",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-SYSTEM-CALLS-SYSTEM-CALL-TYPES-AND-USE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "LU factorization",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-LU-DECOMPOSITION-LU-FACTORIZATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "lanes": {
+        "cs": {
+          "description": "Process creation/termination and threads",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-PROCESSES-PROCESS-CREATION-FOUNDATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Solving systems with LU",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-LA-LU-DECOMPOSITION-SOLVING-SYSTEMS-USING-LU",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "lanes": {
+        "cs": {
+          "description": "IPC — shared memory, message passing, pipes",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-INTER-PROCESS-COMMUNICATION-SHARED-MEMORY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Linear Algebra mixed PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LINEAR-ALGEBRA",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "lanes": {
+        "cs": {
+          "description": "Concurrency, race conditions, critical section",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-CONCURRENCY-RACE-CONDITIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Linear Algebra full test/error repair",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LINEAR-ALGEBRA",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "lanes": {
+        "cs": {
+          "description": "Synchronization I — mutex and semaphore",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-SYNCHRONIZATION-MUTEX",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Calculus overview and prerequisites",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CALCULUS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "lanes": {
+        "cs": {
+          "description": "Synchronization II — monitors and classical problems",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-SYNCHRONIZATION-MONITOR-FOUNDATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Standard limits",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-STANDARD-LIMITS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "lanes": {
+        "cs": {
+          "description": "Deadlock I — conditions and resource-allocation graphs",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-NECESSARY-CONDITIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Limit evaluation",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-LIMIT-EVALUATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "lanes": {
+        "cs": {
+          "description": "Deadlock II — prevention, avoidance, detection",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-DEADLOCK-DEADLOCK-PREVENTION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Limits PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-12",
+      "lanes": {
+        "cs": {
+          "description": "CPU scheduling — FCFS, SJF/SRTF, priority, RR",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-CPU-SCHEDULING-FCFS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Continuity conditions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-CONTINUITY-CONDITIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-13",
+      "lanes": {
+        "cs": {
+          "description": "I/O and disk scheduling",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "CS-S8-IO-SCHEDULING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Continuity problems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-CONTINUITY-CONDITIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-14",
+      "lanes": {
+        "cs": {
+          "description": "Memory management — contiguous, paging, segmentation",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-MEMORY-MANAGEMENT-CONTIGUOUS-ALLOCATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Differentiability basics",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-DIFFERENTIABILITY-CONDITIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-15",
+      "lanes": {
+        "cs": {
+          "description": "Virtual memory — demand paging, replacement, TLB, thrashing",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-VIRTUAL-MEMORY-DEMAND-PAGING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Differentiability problems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY-DIFFERENTIABILITY-CONDITIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-16",
+      "lanes": {
+        "cs": {
+          "description": "File systems — directories, allocation, free space + OS PYQs",
+          "subjectCode": "CS-S8-OPERATING-SYSTEM",
+          "topicCode": "PREP-G27-CS-S8-FILE-SYSTEMS-DIRECTORY-STRUCTURES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Limits/continuity/differentiability mixed",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-LIMITS-CONTINUITY-DIFFERENTIABILITY",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "lanes": {
+        "cs": {
+          "description": "ER model",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-ER-MODEL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Critical points",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-CRITICAL-POINTS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "lanes": {
+        "cs": {
+          "description": "Relational model, schemas, keys",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-RELATIONAL-MODEL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "First-derivative test",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-FIRST-DERIVATIVE-TEST",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "lanes": {
+        "cs": {
+          "description": "Relational Algebra I",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-RELATIONAL-ALGEBRA",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Second-derivative test",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-MAXIMA-MINIMA-SECOND-DERIVATIVE-TEST",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "lanes": {
+        "cs": {
+          "description": "Relational Algebra II and tuple calculus",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-RELATIONAL-ALGEBRA",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Maxima/minima PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-MAXIMA-MINIMA",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-21",
+      "lanes": {
+        "cs": {
+          "description": "SQL I — basic queries and joins",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-SQL-BASIC-SQL-QUERIES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Rolle theorem foundations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-MEAN-VALUE-THEOREM-ROLLE-THEOREM-FOUNDATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-22",
+      "lanes": {
+        "cs": {
+          "description": "SQL II — nested queries, aggregation, GROUP BY, HAVING",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-SQL-NESTED-QUERIES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Mean Value Theorem",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-MEAN-VALUE-THEOREM",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "lanes": {
+        "cs": {
+          "description": "Integrity constraints + functional dependencies, closure, candidate keys",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-INTEGRITY-CONSTRAINTS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "MVT PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-MEAN-VALUE-THEOREM",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "lanes": {
+        "cs": {
+          "description": "Normalization I — 1NF/2NF/3NF",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-NORMAL-FORMS-1NF",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Basic integration",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-INTEGRATION-BASIC-INTEGRATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "lanes": {
+        "cs": {
+          "description": "Normalization II — BCNF, decomposition, lossless, dependency preservation",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-NORMAL-FORMS-BCNF",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Definite integration",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-INTEGRATION-DEFINITE-INTEGRATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "lanes": {
+        "cs": {
+          "description": "File organization and indexing",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-FILE-ORGANIZATION-FILE-ORGANIZATION-FOUNDATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Properties of definite integrals",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-CA-INTEGRATION-PROPERTIES-OF-DEFINITE-INTEGRALS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-27",
+      "lanes": {
+        "cs": {
+          "description": "B-tree and B+ tree",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "CS-S9-B-TREES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Integration PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CA-INTEGRATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-28",
+      "lanes": {
+        "cs": {
+          "description": "Transactions — ACID, schedules, states",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-TRANSACTIONS-ACID",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Calculus full test/error repair",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CALCULUS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-29",
+      "lanes": {
+        "cs": {
+          "description": "Concurrency control — serializability, locks, 2PL, timestamps + DBMS PYQs",
+          "subjectCode": "CS-S9-DATABASES",
+          "topicCode": "PREP-G27-CS-S9-CONCURRENCY-CONTROL-SERIALIZABILITY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Probability — sample space/events/rules",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-11-30",
+      "lanes": {
+        "cs": {
+          "description": "Layering — services, protocols, interfaces, encapsulation, TCP/IP/OSI",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-PRINCIPLES-LAYERING-SERVICES-PROTOCOLS-AND-INTERFACES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Random variables — discrete/continuous",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-RANDOM-VARIABLES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-01",
+      "lanes": {
+        "cs": {
+          "description": "Circuit/packet/virtual-circuit switching + performance",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-CIRCUIT-SWITCHING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "PMF/PDF/CDF foundations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-PMF-FOUNDATIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-02",
+      "lanes": {
+        "cs": {
+          "description": "Error detection — parity/checksum foundations and CRC",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-ERROR-DETECTION-PARITY-FOUNDATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Expectation and variance foundations",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-RANDOM-VARIABLES-EXPECTATION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-03",
+      "lanes": {
+        "cs": {
+          "description": "MAC and Ethernet; ALOHA/CSMA foundations",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-MEDIUM-ACCESS-CONTROL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Random-variable PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-RANDOM-VARIABLES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-04",
+      "lanes": {
+        "cs": {
+          "description": "Distance-vector routing and Bellman-Ford principle",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-DISTANCE-VECTOR-ROUTING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Uniform distribution",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-UNIFORM-DISTRIBUTION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-05",
+      "lanes": {
+        "cs": {
+          "description": "Link-state routing and Dijkstra",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-LINK-STATE-ROUTING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Binomial distribution",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-BINOMIAL-DISTRIBUTION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-06",
+      "lanes": {
+        "cs": {
+          "description": "IPv4 fragmentation, MTU, fields and calculations",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-IPV4-FRAGMENTATION-IPV4-FRAGMENTATION-CALCULATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Poisson distribution",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-POISSON-DISTRIBUTION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-07",
+      "lanes": {
+        "cs": {
+          "description": "CIDR I — addressing, prefixes, subnet basics",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-CIDR-NOTATION-IPV4-ADDRESSING-FOUNDATIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Normal distribution",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-NORMAL-DISTRIBUTION",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-08",
+      "lanes": {
+        "cs": {
+          "description": "CIDR II — subnetting and address blocks",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-CIDR-NOTATION-SUBNETTING",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Exponential distribution",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-EXPONENTIAL-DISTRIBUTION",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-09",
+      "lanes": {
+        "cs": {
+          "description": "NAT",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "PREP-G27-CS-S10-NETWORK-ADDRESS-TRANSLATION-NAT-FUNDAMENTALS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Mixed distribution problems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DISTRIBUTIONS-MIXED-DISTRIBUTION-PROBLEMS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-10",
+      "lanes": {
+        "cs": {
+          "description": "TCP flow control",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-TCP-FLOW-CONTROL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Distribution PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-DISTRIBUTIONS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-11",
+      "lanes": {
+        "cs": {
+          "description": "TCP congestion control",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-TCP-CONGESTION-CONTROL",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Mean, median, mode",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-MEAN",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-12",
+      "lanes": {
+        "cs": {
+          "description": "Socket API",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-SOCKET-API",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Variance and standard deviation",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-DESCRIPTIVE-STATISTICS-VARIANCE",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-13",
+      "lanes": {
+        "cs": {
+          "description": "DNS + HTTP + CN mixed PYQs",
+          "subjectCode": "CS-S10-COMPUTER-NETWORKS",
+          "topicCode": "CS-S10-DNS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Descriptive-statistics PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-DESCRIPTIVE-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-14",
+      "lanes": {
+        "cs": {
+          "description": "Regular expressions",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "CS-S6-REGULAR-EXPRESSIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Conditional probability basics",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-15",
+      "lanes": {
+        "cs": {
+          "description": "DFA, NFA and epsilon-NFA",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-FINITE-AUTOMATA-DFA",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Total probability and conditional rules",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-16",
+      "lanes": {
+        "cs": {
+          "description": "Automata conversion, minimization, equivalence",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-FINITE-AUTOMATA-NFA-TO-DFA-CONVERSION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Bayes theorem",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "PREP-G27-CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES-BAYES-THEOREM",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-17",
+      "lanes": {
+        "cs": {
+          "description": "CFG — production, derivation, parse trees, ambiguity",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-CONTEXT-FREE-GRAMMARS-PRODUCTIONS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Conditional/Bayes problems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PS-CONDITIONAL-PROBABILITY-BAYES",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-18",
+      "lanes": {
+        "cs": {
+          "description": "PDA — operation, construction, acceptance",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-PUSH-DOWN-AUTOMATA-PDA-OPERATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Probability/Statistics mixed PYQs",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "lanes": {
+        "cs": {
+          "description": "Regular languages — closure and decision foundations",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-REGULAR-LANGUAGES-REGULAR-LANGUAGE-CLOSURE-PROPERTIES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Probability and Statistics full test",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-20",
+      "lanes": {
+        "cs": {
+          "description": "Context-free languages — properties and closure",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-CONTEXT-FREE-LANGUAGES-CFL-PROPERTIES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Probability error repair and formulas",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-21",
+      "lanes": {
+        "cs": {
+          "description": "Pumping lemma — regular and CFL",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "PREP-G27-CS-S6-PUMPING-LEMMA-PUMPING-LEMMA-FOR-REGULAR-LANGUAGES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — Discrete logic/sets/relations/functions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DISCRETE-MATHEMATICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-22",
+      "lanes": {
+        "cs": {
+          "description": "Turing machines",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "CS-S6-TURING-MACHINES",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — posets/groups/graphs/combinatorics",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-DISCRETE-MATHEMATICS",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-23",
+      "lanes": {
+        "cs": {
+          "description": "Undecidability, reductions, halting reasoning + TOC PYQs",
+          "subjectCode": "CS-S6-THEORY-COMPUTATION",
+          "topicCode": "CS-S6-UNDECIDABILITY",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — matrices/determinants/linear systems",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LINEAR-ALGEBRA",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-24",
+      "lanes": {
+        "cs": {
+          "description": "Lexical analysis — tokens, lexemes, patterns, regex/automata",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "CS-S7-LEXICAL-ANALYSIS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — eigenvalues/eigenvectors/LU",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-LINEAR-ALGEBRA",
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-25",
+      "lanes": {
+        "cs": {
+          "description": "Parsing I — FIRST/FOLLOW, top-down, LL(1)",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-PARSING-FIRST",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — limits/continuity/differentiability",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CALCULUS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Mixed GA",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "lanes": {
+        "cs": {
+          "description": "Parsing II — LR(0), SLR, CLR, LALR, shift/reduce",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-PARSING-LR-0",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — extrema, MVT, integration",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-CALCULUS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "DI and Quant",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-DATA-INTERPRETATION",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "lanes": {
+        "cs": {
+          "description": "Syntax-directed translation, SDDs, attributes",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "CS-S7-SYNTAX-DIRECTED-TRANSLATION",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — random variables and distributions",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Spatial and Verbal",
+          "subjectCode": "GA",
+          "topicCode": "GA-S4-SPATIAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "lanes": {
+        "cs": {
+          "description": "Runtime environments, activation records, storage allocation",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-RUNTIME-ENVIRONMENTS-ACTIVATION-RECORDS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Revision — statistics, conditional probability and Bayes",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": "CS-S1-PROBABILITY-STATISTICS",
+          "taskType": "MATH",
+          "plannedMinutes": 180,
+          "timeBlock": "14:00–17:00"
+        },
+        "ga": {
+          "description": "Weekly GA test",
+          "subjectCode": "GA",
+          "topicCode": null,
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "17:15–18:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "lanes": {
+        "cs": {
+          "description": "Intermediate code — TAC, quadruples, triples",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-INTERMEDIATE-CODE-GENERATION-THREE-ADDRESS-CODE",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Math mixed PYQ test 1",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": null,
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Quant PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S2-QUANTITATIVE-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-30",
+      "lanes": {
+        "cs": {
+          "description": "Local optimisation, basic blocks and constant propagation",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-LOCAL-OPTIMISATION-BASIC-BLOCKS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Math mixed PYQ test 2",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": null,
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Verbal PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S1-VERBAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    },
+    {
+      "date": "2026-12-31",
+      "lanes": {
+        "cs": {
+          "description": "Liveness analysis + common-subexpression elimination + final Compiler mixed PYQs",
+          "subjectCode": "CS-S7-COMPILER-DESIGN",
+          "topicCode": "PREP-G27-CS-S7-LIVENESS-ANALYSIS-LIVENESS-FUNDAMENTALS",
+          "taskType": "THEORY",
+          "plannedMinutes": 180,
+          "timeBlock": "09:00–12:00"
+        },
+        "math": {
+          "description": "Final Math formula sheet + weak-topic repair",
+          "subjectCode": "CS-S1-ENGINEERING-MATHEMATICS",
+          "topicCode": null,
+          "taskType": "MATH",
+          "plannedMinutes": 120,
+          "timeBlock": "14:00–16:00"
+        },
+        "ga": {
+          "description": "Analytical PYQs",
+          "subjectCode": "GA",
+          "topicCode": "GA-S3-ANALYTICAL-APTITUDE",
+          "taskType": "APTITUDE",
+          "plannedMinutes": 60,
+          "timeBlock": "16:15–17:15"
+        }
+      }
+    }
+  ]
+}

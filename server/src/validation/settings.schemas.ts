@@ -9,6 +9,7 @@ export const settingsPatchSchema = z.object({
   examDate: dateOnly.nullish(),
   targetMarks: z.number().finite().min(0).max(100).optional(),
   weekdayStudyHours: z.number().finite().min(0).max(24).optional(),
+  saturdayStudyHours: z.number().finite().min(0).max(24).optional(),
   sundayStudyHours: z.number().finite().min(0).max(24).optional(),
   mondayStudyHours: z.number().finite().min(0).max(24).optional()
 }).strict().refine((value) => Object.keys(value).length > 0, 'At least one mutable settings field is required.');

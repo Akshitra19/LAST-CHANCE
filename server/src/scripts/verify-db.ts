@@ -1,6 +1,7 @@
 import { env } from '../config/env.js';
 import { getSupabaseClient } from '../config/supabase.js';
 import type { Json } from '../types/database.types.js';
+import { actionableLeafRows, validateSyllabusGraph } from '../domain/syllabus.js';
 
 const requiredTables = [
   'app_settings',
@@ -51,6 +52,8 @@ interface TopicRow {
   subject_id: string;
   parent_topic_id: string | null;
   code: string;
+  name: string;
+  display_order: number;
   syllabus_version: string;
   preparation_status: string;
   is_official: boolean;
@@ -171,10 +174,11 @@ async function main(): Promise<void> {
     assert(!error, `Table ${table} is not queryable: ${error?.message ?? 'unknown error'}`);
   }
 
-  const settingsResult = await client.from('app_settings').select('singleton_key');
+  const settingsResult = await client.from('app_settings').select('singleton_key,saturday_study_hours');
   assert(!settingsResult.error, `Could not read app settings: ${settingsResult.error?.message ?? 'unknown error'}`);
   assert(settingsResult.data?.length === 1 && settingsResult.data[0]?.singleton_key === 'default',
     'Expected exactly the app_settings/default singleton.');
+  assert(settingsResult.data[0]?.saturday_study_hours === 7, 'Expected the Saturday study-hours default to be 7.');
 
   const subjectsResult = await client
     .from('subjects')
@@ -192,16 +196,20 @@ async function main(): Promise<void> {
 
   const topicsResult = await client
     .from('topics')
-    .select('id,subject_id,parent_topic_id,code,syllabus_version,preparation_status,is_official')
+    .select('id,subject_id,parent_topic_id,code,name,display_order,syllabus_version,preparation_status,is_official')
     .eq('syllabus_version', 'GATE_2027');
   assert(!topicsResult.error, `Could not read topics: ${topicsResult.error?.message ?? 'unknown error'}`);
   const topics = (topicsResult.data ?? []) as TopicRow[];
-  assert(topics.length === 173, `Expected 173 topics, found ${topics.length}.`);
+  const officialTopics = topics.filter((topic) => topic.is_official);
+  const preparationTopics = topics.filter((topic) => !topic.is_official);
+  assert(officialTopics.length === 173, `Expected 173 official topics, found ${officialTopics.length}.`);
+  assert(preparationTopics.length === 493, `Expected 493 preparation topics, found ${preparationTopics.length}.`);
   assert(findDuplicates(topics.map((topic) => topic.code)).length === 0, 'Duplicate topic codes found.');
-  assert(topics.every((topic) => topic.is_official), 'All seeded topics must be official.');
+  assert(preparationTopics.every((topic) => topic.parent_topic_id !== null), 'Preparation topics must not be roots.');
   assert(topics.every((topic) => allowedStatuses.has(topic.preparation_status)), 'Invalid topic status found.');
 
   const subjectIds = new Set(subjects.map((subject) => subject.id));
+  validateSyllabusGraph(topics, subjectIds);
   const topicById = new Map(topics.map((topic) => [topic.id, topic]));
   for (const topic of topics) {
     assert(subjectIds.has(topic.subject_id), `Topic ${topic.code} has a missing subject.`);
@@ -212,13 +220,18 @@ async function main(): Promise<void> {
     }
   }
   assertAcyclic(topics);
-  await verifyAnswerResultContract(client, topics[0]!.subject_id, topics[0]!.id);
+  const actionableLeaves = actionableLeafRows(topics);
+  assert(actionableLeaves.length > 0, 'Expected actionable syllabus leaves.');
+  await verifyAnswerResultContract(client, actionableLeaves[0]!.subject_id, actionableLeaves[0]!.id);
 
   console.log(JSON.stringify({
     status: 'PASS',
     tables: requiredTables.length,
     subjects: subjects.length,
-    topics: topics.length,
+    officialTopics: officialTopics.length,
+    preparationTopics: preparationTopics.length,
+    totalSyllabusNodes: topics.length,
+    actionableLeaves: actionableLeaves.length,
     duplicateSubjectCodes: 0,
     duplicateTopicCodes: 0,
     brokenParents: 0,

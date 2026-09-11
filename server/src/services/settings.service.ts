@@ -4,7 +4,7 @@ import { fetchSettings, updateSettings } from '../repositories/settings.reposito
 import type { SettingsPatch } from '../validation/settings.schemas.js';
 
 function mapSettings(row: NonNullable<Awaited<ReturnType<typeof fetchSettings>>>) {
-  return { examName: row.exam_name, examDate: row.exam_date, targetMarks: row.target_marks, weekdayStudyHours: row.weekday_study_hours, sundayStudyHours: row.sunday_study_hours, mondayStudyHours: row.monday_study_hours, updatedAt: row.updated_at };
+  return { examName: row.exam_name, examDate: row.exam_date, targetMarks: row.target_marks, weekdayStudyHours: row.weekday_study_hours, saturdayStudyHours: row.saturday_study_hours, sundayStudyHours: row.sunday_study_hours, mondayStudyHours: row.monday_study_hours, updatedAt: row.updated_at };
 }
 
 export async function getSettings() {
@@ -18,6 +18,7 @@ export async function patchSettings(patch: SettingsPatch) {
   if ('examDate' in patch) update.exam_date = patch.examDate ?? null;
   if (patch.targetMarks !== undefined) update.target_marks = patch.targetMarks;
   if (patch.weekdayStudyHours !== undefined) update.weekday_study_hours = patch.weekdayStudyHours;
+  if (patch.saturdayStudyHours !== undefined) update.saturday_study_hours = patch.saturdayStudyHours;
   if (patch.sundayStudyHours !== undefined) update.sunday_study_hours = patch.sundayStudyHours;
   if (patch.mondayStudyHours !== undefined) update.monday_study_hours = patch.mondayStudyHours;
   const settings = await updateSettings(update);

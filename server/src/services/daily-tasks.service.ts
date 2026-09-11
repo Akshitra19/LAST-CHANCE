@@ -2,6 +2,7 @@ import { AppError } from '../errors/app-error.js';
 import { createTaskRow, deleteTaskRow, fetchSubjectReferences, fetchTopicReferences, findActiveTaskRow, findSubject, findTaskRow, findTopic, listTaskRows, updateTaskRow, type DailyTaskRow, type SubjectReference, type TopicReference } from '../repositories/daily-tasks.repository.js';
 import type { TablesInsert, TablesUpdate } from '../types/database.types.js';
 import type { CreateDailyTask, UpdateDailyTask } from '../validation/daily-tasks.schemas.js';
+import { buildTopicPath } from '../domain/topic-path.js';
 
 function normalizeNotes(value: string | null | undefined): string | null | undefined { return value === undefined ? undefined : value === null || value.trim() === '' ? null : value.trim(); }
 async function validateReferences(subjectId: string | null | undefined, topicId: string | null | undefined): Promise<void> {
@@ -9,11 +10,42 @@ async function validateReferences(subjectId: string | null | undefined, topicId:
   if (subjectId && !(await findSubject(subjectId))) throw new AppError(404, 'SUBJECT_NOT_FOUND', 'Subject was not found.');
   if (topicId) { const topic = await findTopic(topicId); if (!topic) throw new AppError(404, 'TOPIC_NOT_FOUND', 'Topic was not found.'); if (topic.subject_id !== subjectId) throw new AppError(400, 'TOPIC_SUBJECT_MISMATCH', 'Topic does not belong to the selected subject.'); }
 }
-function mapTask(row: DailyTaskRow, subjects = new Map<string, SubjectReference>(), topics = new Map<string, TopicReference>()) { const subject = row.subject_id ? subjects.get(row.subject_id) ?? null : null; const topic = row.topic_id ? topics.get(row.topic_id) ?? null : null; return { id: row.id, taskDate: row.task_date, taskType: row.task_type, plannedMinutes: row.planned_minutes, actualMinutes: row.actual_minutes, status: row.status, startedAt: row.started_at, completedAt: row.completed_at, notes: row.notes, subject: subject ? { id: subject.id, code: subject.code, name: subject.name } : null, topic: topic ? { id: topic.id, code: topic.code, name: topic.name } : null, createdAt: row.created_at, updatedAt: row.updated_at }; }
-async function canonical(row: DailyTaskRow) { const subjects = row.subject_id ? await fetchSubjectReferences([row.subject_id]) : []; const topics = row.topic_id ? await fetchTopicReferences([row.topic_id]) : []; return mapTask(row, new Map(subjects.map((value) => [value.id, value])), new Map(topics.map((value) => [value.id, value]))); }
+
+async function topicReferencesWithAncestors(ids: string[]): Promise<TopicReference[]> {
+  const found = new Map<string, TopicReference>();
+  let pending = [...new Set(ids)];
+  while (pending.length > 0) {
+    const rows = await fetchTopicReferences(pending);
+    for (const row of rows) found.set(row.id, row);
+    pending = [...new Set(rows.flatMap((row) => row.parent_topic_id && !found.has(row.parent_topic_id) ? [row.parent_topic_id] : []))];
+  }
+  return [...found.values()];
+}
+
+function mapTask(row: DailyTaskRow, subjects = new Map<string, SubjectReference>(), topics = new Map<string, TopicReference>()) {
+  const subject = row.subject_id ? subjects.get(row.subject_id) ?? null : null;
+  const topic = row.topic_id ? topics.get(row.topic_id) ?? null : null;
+  return {
+    id: row.id, taskDate: row.task_date, taskType: row.task_type, plannedMinutes: row.planned_minutes,
+    actualMinutes: row.actual_minutes, status: row.status, startedAt: row.started_at, completedAt: row.completed_at,
+    notes: row.notes, planKey: row.plan_key, planSlot: row.plan_slot,
+    subject: subject ? { id: subject.id, code: subject.code, name: subject.name } : null,
+    topic: topic && subject ? { id: topic.id, code: topic.code, name: topic.name, path: buildTopicPath(topic, subject.name, topics) } : null,
+    createdAt: row.created_at, updatedAt: row.updated_at
+  };
+}
+
+async function referenceMaps(rows: readonly DailyTaskRow[]) {
+  const subjectIds = [...new Set(rows.flatMap((row) => row.subject_id ? [row.subject_id] : []))];
+  const topicIds = [...new Set(rows.flatMap((row) => row.topic_id ? [row.topic_id] : []))];
+  const [subjects, topics] = await Promise.all([fetchSubjectReferences(subjectIds), topicReferencesWithAncestors(topicIds)]);
+  return { subjects: new Map(subjects.map((value) => [value.id, value])), topics: new Map(topics.map((value) => [value.id, value])) };
+}
+
+async function canonical(row: DailyTaskRow) { const references = await referenceMaps([row]); return mapTask(row, references.subjects, references.topics); }
 export function accumulatedActualMinutes(existing: number | null, startedAt: Date, now: Date): number { const elapsedMs = now.valueOf() - startedAt.valueOf(); if (elapsedMs < 0) throw new AppError(409, 'INVALID_TIMER_STATE', 'Timer start time is invalid.'); const total = (existing ?? 0) + Math.floor(elapsedMs / 60_000); if (total > 1440) throw new AppError(409, 'TIMER_LIMIT_EXCEEDED', 'Timer duration requires manual correction.'); return total; }
-export async function listDailyTasks(date: string) { const rows = await listTaskRows(date); const subjectIds = [...new Set(rows.flatMap((row) => row.subject_id ? [row.subject_id] : []))]; const topicIds = [...new Set(rows.flatMap((row) => row.topic_id ? [row.topic_id] : []))]; const [subjects, topics] = await Promise.all([fetchSubjectReferences(subjectIds), fetchTopicReferences(topicIds)]); const subjectMap = new Map(subjects.map((value) => [value.id, value])); const topicMap = new Map(topics.map((value) => [value.id, value])); return rows.map((row) => mapTask(row, subjectMap, topicMap)); }
-export async function createDailyTask(input: CreateDailyTask) { await validateReferences(input.subjectId, input.topicId); const now = new Date().toISOString(); const insert: TablesInsert<'daily_tasks'> = { task_date: input.taskDate, task_type: input.taskType, planned_minutes: input.plannedMinutes, subject_id: input.subjectId ?? null, topic_id: input.topicId ?? null, notes: normalizeNotes(input.notes) ?? null, status: 'TODO', actual_minutes: null, started_at: null, completed_at: null, updated_at: now }; return canonical(await createTaskRow(insert)); }
+export async function listDailyTasks(date: string) { const rows = await listTaskRows(date); const references = await referenceMaps(rows); return rows.map((row) => mapTask(row, references.subjects, references.topics)); }
+export async function createDailyTask(input: CreateDailyTask) { await validateReferences(input.subjectId, input.topicId); const now = new Date().toISOString(); const insert: TablesInsert<'daily_tasks'> = { task_date: input.taskDate, task_type: input.taskType, planned_minutes: input.plannedMinutes, subject_id: input.subjectId ?? null, topic_id: input.topicId ?? null, notes: normalizeNotes(input.notes) ?? null, plan_key: null, plan_slot: null, status: 'TODO', actual_minutes: null, started_at: null, completed_at: null, updated_at: now }; return canonical(await createTaskRow(insert)); }
 export async function patchDailyTask(id: string, input: UpdateDailyTask) { const current = await findTaskRow(id); if (!current) throw new AppError(404, 'TASK_NOT_FOUND', 'Task was not found.'); const subjectId = input.subjectId !== undefined ? input.subjectId : current.subject_id; const topicId = input.topicId !== undefined ? input.topicId : current.topic_id; if (input.subjectId !== undefined && input.topicId === undefined && input.subjectId !== current.subject_id) await validateReferences(subjectId, null); else await validateReferences(subjectId, topicId); if (current.started_at && ['taskDate', 'taskType', 'subjectId', 'topicId', 'actualMinutes'].some((key) => key in input)) throw new AppError(409, 'TASK_TIMER_ACTIVE', 'Stop the timer before changing this field.'); const now = new Date(); const update: TablesUpdate<'daily_tasks'> = { updated_at: now.toISOString() }; if (input.taskDate !== undefined) update.task_date = input.taskDate; if (input.taskType !== undefined) update.task_type = input.taskType; if (input.subjectId !== undefined) { update.subject_id = input.subjectId; if (input.topicId === undefined && input.subjectId !== current.subject_id) update.topic_id = null; } if (input.topicId !== undefined) update.topic_id = input.topicId; if (input.plannedMinutes !== undefined) update.planned_minutes = input.plannedMinutes; if (input.actualMinutes !== undefined) update.actual_minutes = input.actualMinutes; if (input.notes !== undefined) update.notes = normalizeNotes(input.notes) ?? null; if (input.status !== undefined) { update.status = input.status; if (input.status === 'TODO') update.completed_at = null; if (input.status === 'SKIPPED') update.completed_at = null; if (input.status === 'DONE') update.completed_at = now.toISOString(); if (current.started_at && input.status !== 'TODO') { update.actual_minutes = accumulatedActualMinutes(current.actual_minutes, new Date(current.started_at), now); update.started_at = null; } }
   const saved = await updateTaskRow(id, update); if (!saved) throw new AppError(404, 'TASK_NOT_FOUND', 'Task was not found.'); return canonical(saved); }
 export async function deleteDailyTask(id: string): Promise<void> { const task = await findTaskRow(id); if (!task) throw new AppError(404, 'TASK_NOT_FOUND', 'Task was not found.'); if (task.started_at) throw new AppError(409, 'TASK_TIMER_ACTIVE', 'Stop the timer before deleting this task.'); if (!(await deleteTaskRow(id))) throw new AppError(404, 'TASK_NOT_FOUND', 'Task was not found.'); }

@@ -3,6 +3,7 @@ import { classifyResultAnswer, ResultIntegrityError, summarizeOutcomes, type Res
 import { AppError } from '../errors/app-error.js';
 import { fetchAnalyticsAnswers, fetchAnalyticsAttempts, fetchAnalyticsLinks, fetchAnalyticsQuestions, fetchAnalyticsSettings, fetchAnalyticsSubjects, fetchAnalyticsTasks, fetchAnalyticsTests, fetchAnalyticsTopics, type AnalyticsAnswerRow, type AnalyticsAttemptRow, type AnalyticsQuestionRow, type AnalyticsTestRow } from '../repositories/analytics.repository.js';
 import type { AnalyticsQuery } from '../validation/analytics.schemas.js';
+import { actionableLeafRows } from '../domain/syllabus.js';
 
 function integrity(message: string): never { throw new AppError(409, 'ANALYTICS_INTEGRITY_ERROR', message); }
 const asTestType = (value: string): TestType => testTypes.includes(value as TestType) ? value as TestType : integrity('A test has an unsupported type.');
@@ -45,7 +46,7 @@ export async function getAnalytics(query: AnalyticsQuery, now = new Date()) {
   const [attemptRows, subjects, tasks, topics, settings] = await Promise.all([
     fetchAnalyticsAttempts(bounds.startInstant, bounds.endInstant), fetchAnalyticsSubjects(), fetchAnalyticsTasks(bounds.startDate, bounds.endDate), fetchAnalyticsTopics(), fetchAnalyticsSettings()
   ]);
-  if (subjects.length !== 11 || topics.length !== 173) integrity('Official syllabus references are incomplete.');
+  if (subjects.length !== 11 || topics.filter((topic) => topic.is_official).length !== 173) integrity('Official syllabus references are incomplete.');
   const sourceTestIds = [...new Set(attemptRows.map((row) => row.test_id))];
   const tests = await fetchAnalyticsTests(sourceTestIds); const testById = new Map(tests.map((row) => [row.id, row]));
   if (testById.size !== sourceTestIds.length || attemptRows.some((attempt) => !testById.has(attempt.test_id))) integrity('A submitted analytics test reference is missing.');
@@ -71,7 +72,7 @@ export async function getAnalytics(query: AnalyticsQuery, now = new Date()) {
   const adherence = plannedStudyMinutes === 0 ? null : (actualStudyMinutes / plannedStudyMinutes) * 100;
   const subjectPerformance = aggregateSubjects(subjects.map((row) => ({ id: row.id, code: row.code, name: row.name, displayOrder: row.display_order })), facts.flatMap((fact) => fact.answers.map((answer) => ({ subjectId: answer.subjectId, outcome: answer.outcome, timeSeconds: answer.time_seconds }))));
   const mistakeBreakdown = aggregateMistakes(facts.flatMap((fact) => fact.answers.map((answer) => ({ outcome: answer.outcome, mistakeType: answer.mistake_type }))));
-  const syllabusProgress = aggregateSyllabus(topics.map((topic) => topic.preparation_status));
+  const syllabusProgress = aggregateSyllabus(actionableLeafRows(topics).map((topic) => topic.preparation_status));
   const studyAdherencePercent = adherence === null ? null : roundMetric(adherence);
   return {
     meta: { range: query.range, testType: query.testType as AnalyticsTestType, timezone: analyticsTimezone, startDate: bounds.startDate, endDate: bounds.endDate, examName: settings.exam_name, examDate: settings.exam_date },

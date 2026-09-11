@@ -72,6 +72,7 @@ export type Database = {
           exam_date: string | null
           exam_name: string
           monday_study_hours: number
+          saturday_study_hours: number
           singleton_key: string
           sunday_study_hours: number
           target_marks: number
@@ -83,6 +84,7 @@ export type Database = {
           exam_date?: string | null
           exam_name: string
           monday_study_hours: number
+          saturday_study_hours?: number
           singleton_key?: string
           sunday_study_hours: number
           target_marks: number
@@ -94,6 +96,7 @@ export type Database = {
           exam_date?: string | null
           exam_name?: string
           monday_study_hours?: number
+          saturday_study_hours?: number
           singleton_key?: string
           sunday_study_hours?: number
           target_marks?: number
@@ -153,6 +156,8 @@ export type Database = {
           created_at: string
           id: string
           notes: string | null
+          plan_key: string | null
+          plan_slot: number | null
           planned_minutes: number
           started_at: string | null
           status: string
@@ -168,6 +173,8 @@ export type Database = {
           created_at?: string
           id?: string
           notes?: string | null
+          plan_key?: string | null
+          plan_slot?: number | null
           planned_minutes: number
           started_at?: string | null
           status?: string
@@ -183,6 +190,8 @@ export type Database = {
           created_at?: string
           id?: string
           notes?: string | null
+          plan_key?: string | null
+          plan_slot?: number | null
           planned_minutes?: number
           started_at?: string | null
           status?: string

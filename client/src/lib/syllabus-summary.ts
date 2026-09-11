@@ -8,10 +8,12 @@ export function countSyllabusStatuses(syllabus: SyllabusData): { total: number; 
   const visit = (topic: SyllabusTopic): void => {
     if (seen.has(topic.id)) throw new Error('Duplicate syllabus topic.');
     seen.add(topic.id);
-    counts[topic.status] += 1;
+    if (topic.children.length === 0) counts[topic.status] += 1;
     topic.children.forEach(visit);
   };
   syllabus.subjects.forEach((subject) => subject.topics.forEach(visit));
-  if (seen.size !== syllabus.topicCount) throw new Error('Syllabus topic count mismatch.');
-  return { total: seen.size, counts };
+  if (seen.size !== syllabus.totalNodeCount) throw new Error('Syllabus node count mismatch.');
+  const total = Object.values(counts).reduce((sum, count) => sum + count, 0);
+  if (total !== syllabus.actionableLeafCount) throw new Error('Syllabus actionable-leaf count mismatch.');
+  return { total, counts };
 }

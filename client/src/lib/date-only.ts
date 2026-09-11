@@ -34,9 +34,10 @@ export function getCountdown(examDate: string | null, now = new Date()): Countdo
   return { kind: 'future', label: `${days} ${days === 1 ? 'day' : 'days'} remaining`, days };
 }
 
-export function studyHoursForToday(settings: { mondayStudyHours: number; sundayStudyHours: number; weekdayStudyHours: number }, now = new Date()): number {
+export function studyHoursForToday(settings: { mondayStudyHours: number; saturdayStudyHours: number; sundayStudyHours: number; weekdayStudyHours: number }, now = new Date()): number {
   if (now.getDay() === 0) return settings.sundayStudyHours;
   if (now.getDay() === 1) return settings.mondayStudyHours;
+  if (now.getDay() === 6) return settings.saturdayStudyHours;
   return settings.weekdayStudyHours;
 }
 

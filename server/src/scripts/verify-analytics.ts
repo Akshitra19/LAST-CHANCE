@@ -3,6 +3,7 @@ import { addDays, adherencePercent, aggregateMistakes, aggregateSubjects, aggreg
 import { classifyResultAnswer } from '../domain/results.js';
 import { getSupabaseClient } from '../config/supabase.js';
 import type { Json, TablesInsert } from '../types/database.types.js';
+import { actionableLeafRows } from '../domain/syllabus.js';
 
 type ApiResult = { response: Response; body: unknown };
 type Analytics = Awaited<ReturnType<typeof import('../services/analytics.service.js')['getAnalytics']>>;
@@ -62,10 +63,11 @@ async function runIntegrationVerification(): Promise<void> {
     const before30 = await analytics('30D', 'ALL'); const before7 = await analytics('7D', 'ALL'); const before90 = await analytics('90D', 'ALL'); const beforeAll = await analytics('ALL', 'ALL');
 
     const syllabus = await db.from('subjects').select('id,code,name,display_order').eq('syllabus_version', 'GATE_2027').order('display_order'); assert(!syllabus.error && syllabus.data.length === 11, 'Official analytics subjects are unavailable.');
-    const topics = await db.from('topics').select('id,subject_id,preparation_status,updated_at').eq('syllabus_version', 'GATE_2027').order('id'); assert(!topics.error && topics.data.length === 173, 'Official analytics topics are unavailable.');
+    const topics = await db.from('topics').select('id,subject_id,parent_topic_id,preparation_status,is_official,updated_at').eq('syllabus_version', 'GATE_2027').order('id'); assert(!topics.error && topics.data.filter((topic) => topic.is_official).length === 173 && topics.data.filter((topic) => !topic.is_official).length === 493, 'Analytics syllabus topics are unavailable.');
+    const leafTopics = actionableLeafRows(topics.data);
     const subjectByCode = new Map(syllabus.data.map((row) => [row.code, row])); const math = subjectByCode.get('CS-S1-ENGINEERING-MATHEMATICS'); const ga = subjectByCode.get('GA'); const core = syllabus.data.find((row) => row.code !== 'GA' && row.code !== 'CS-S1-ENGINEERING-MATHEMATICS'); assert(math && ga && core, 'Required Full Mock subjects are unavailable.');
-    const topicFor = (subjectId: string) => topics.data.find((topic) => topic.subject_id === subjectId); const mathTopic = topicFor(math.id); const gaTopic = topicFor(ga.id); const coreTopic = topicFor(core.id); assert(mathTopic && gaTopic && coreTopic, 'Required analytics topics are unavailable.');
-    topicSnapshots = topics.data.slice(0, 7).map((row) => ({ id: row.id, preparation_status: row.preparation_status, updated_at: row.updated_at }));
+    const topicFor = (subjectId: string) => leafTopics.find((topic) => topic.subject_id === subjectId); const mathTopic = topicFor(math.id); const gaTopic = topicFor(ga.id); const coreTopic = topicFor(core.id); assert(mathTopic && gaTopic && coreTopic, 'Required analytics leaf topics are unavailable.');
+    topicSnapshots = leafTopics.slice(0, 7).map((row) => ({ id: row.id, preparation_status: row.preparation_status, updated_at: row.updated_at }));
     for (let index = 0; index < topicSnapshots.length; index++) { const preparationStatus = syllabusStatuses[index]; assert(preparationStatus, 'Missing syllabus status fixture.'); const result = await db.from('topics').update({ preparation_status: preparationStatus, updated_at: new Date().toISOString() }).eq('id', topicSnapshots[index]!.id); assert(!result.error, 'Could not prepare syllabus analytics fixture.'); }
 
     type PlannedQuestion = TablesInsert<'questions'> & { question_text: string };
@@ -119,7 +121,7 @@ async function runIntegrationVerification(): Promise<void> {
     assert(after30.mistakeBreakdown.total - before30.mistakeBreakdown.total === 5 && after30.mistakeBreakdown.classified - before30.mistakeBreakdown.classified === 4 && after30.mistakeBreakdown.unclassified - before30.mistakeBreakdown.unclassified === 1, 'Mistake classification totals failed.');
     near(after30.mistakeBreakdown.classificationRatePercent, (after30.mistakeBreakdown.classified / after30.mistakeBreakdown.total) * 100, 'API mistake classification rate failed');
     assert(after30.studyTrend.length === 30 && sum(after30.studyTrend.map((bucket) => bucket.plannedMinutes)) - sum(before30.studyTrend.map((bucket) => bucket.plannedMinutes)) === 110, 'Daily study buckets failed against the API.');
-    const expectedStatuses = await db.from('topics').select('preparation_status').eq('syllabus_version', 'GATE_2027'); assert(!expectedStatuses.error, 'Could not calculate expected syllabus snapshot.'); const expectedProgress = aggregateSyllabus(expectedStatuses.data.map((row) => row.preparation_status)); assert(JSON.stringify(after30.syllabusProgress) === JSON.stringify(expectedProgress) && after30.syllabusProgress.totalTopics === 173, 'Syllabus progress is not the current exact snapshot.');
+    const expectedStatuses = await db.from('topics').select('id,parent_topic_id,preparation_status').eq('syllabus_version', 'GATE_2027'); assert(!expectedStatuses.error, 'Could not calculate expected syllabus snapshot.'); const expectedLeaves = actionableLeafRows(expectedStatuses.data); const expectedProgress = aggregateSyllabus(expectedLeaves.map((row) => row.preparation_status)); assert(JSON.stringify(after30.syllabusProgress) === JSON.stringify(expectedProgress) && after30.syllabusProgress.totalTopics === expectedLeaves.length, 'Syllabus progress is not the current exact actionable-leaf snapshot.');
     near(sum(after30.syllabusProgress.items.map((item) => item.percentage)), 100, 'Syllabus percentages do not total 100', 0.1);
     assert(after30.highlights.every((item) => item.label && item.value && !/recommend|predict|should/i.test(`${item.label} ${item.value} ${item.detail ?? ''}`)), 'Highlights are not purely factual.');
 

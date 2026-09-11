@@ -9,7 +9,7 @@ export type AnalyticsQuestionRow = Pick<Tables<'questions'>, 'id' | 'subject_id'
 export type AnalyticsLinkRow = Pick<Tables<'test_questions'>, 'test_id' | 'question_id' | 'position'>;
 export type AnalyticsSubjectRow = Pick<Tables<'subjects'>, 'id' | 'code' | 'name' | 'display_order'>;
 export type AnalyticsTaskRow = Pick<Tables<'daily_tasks'>, 'id' | 'task_date' | 'planned_minutes' | 'actual_minutes' | 'status' | 'subject_id' | 'topic_id'>;
-export type AnalyticsTopicRow = Pick<Tables<'topics'>, 'id' | 'subject_id' | 'preparation_status'>;
+export type AnalyticsTopicRow = Pick<Tables<'topics'>, 'id' | 'subject_id' | 'parent_topic_id' | 'preparation_status' | 'is_official'>;
 export type AnalyticsSettingsRow = Pick<Tables<'app_settings'>, 'target_marks' | 'exam_date' | 'exam_name'>;
 
 const pageSize = 500;
@@ -60,7 +60,7 @@ export async function fetchAnalyticsTasks(startDate: string | null, endDate: str
   return pages(async (from, to) => { let query = db().from('daily_tasks').select('id,task_date,planned_minutes,actual_minutes,status,subject_id,topic_id').lte('task_date', endDate); if (startDate) query = query.gte('task_date', startDate); const result = await query.order('task_date').order('id').range(from, to); return { data: result.data as AnalyticsTaskRow[] | null, error: result.error }; });
 }
 export async function fetchAnalyticsTopics(): Promise<AnalyticsTopicRow[]> {
-  return pages(async (from, to) => { const result = await db().from('topics').select('id,subject_id,preparation_status').eq('syllabus_version', 'GATE_2027').order('id').range(from, to); return { data: result.data as AnalyticsTopicRow[] | null, error: result.error }; });
+  return pages(async (from, to) => { const result = await db().from('topics').select('id,subject_id,parent_topic_id,preparation_status,is_official').eq('syllabus_version', 'GATE_2027').order('id').range(from, to); return { data: result.data as AnalyticsTopicRow[] | null, error: result.error }; });
 }
 export async function fetchAnalyticsSettings(): Promise<AnalyticsSettingsRow> {
   const { data, error } = await db().from('app_settings').select('target_marks,exam_date,exam_name').eq('singleton_key', 'default').single(); if (error || !data) failed(); return data;

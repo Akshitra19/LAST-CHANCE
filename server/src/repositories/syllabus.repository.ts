@@ -12,15 +12,21 @@ function clientOrThrow() {
 }
 
 export async function fetchOfficialSubjects(): Promise<SubjectRow[]> {
-  const { data, error } = await clientOrThrow().from('subjects').select('id,code,source_paper_code,name,display_order,is_official,syllabus_version').eq('syllabus_version', 'GATE_2027').order('source_paper_code').order('display_order').order('code');
+  const { data, error } = await clientOrThrow().from('subjects').select('id,code,source_paper_code,name,display_order,is_official,syllabus_version').eq('syllabus_version', 'GATE_2027').eq('is_official', true).order('source_paper_code').order('display_order').order('code');
   if (error) throw new AppError(503, 'DATABASE_UNAVAILABLE', 'Database service is unavailable.');
   return data;
 }
 
-export async function fetchOfficialTopics(): Promise<TopicRow[]> {
+export async function fetchSyllabusTopics(): Promise<TopicRow[]> {
   const { data, error } = await clientOrThrow().from('topics').select('id,subject_id,parent_topic_id,code,name,preparation_status,display_order,is_official,syllabus_version,updated_at').eq('syllabus_version', 'GATE_2027').order('subject_id').order('display_order').order('code');
   if (error) throw new AppError(503, 'DATABASE_UNAVAILABLE', 'Database service is unavailable.');
   return data;
+}
+
+export async function topicHasChildren(id: string): Promise<boolean> {
+  const { data, error } = await clientOrThrow().from('topics').select('id').eq('parent_topic_id', id).limit(1).maybeSingle();
+  if (error) throw new AppError(503, 'DATABASE_UNAVAILABLE', 'Database service is unavailable.');
+  return Boolean(data);
 }
 
 export async function updateTopicStatus(id: string, update: TablesUpdate<'topics'>): Promise<TopicRow | null> {
